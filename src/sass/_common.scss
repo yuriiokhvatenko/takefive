@@ -1,1 +1,10 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: currentColor;
+}
