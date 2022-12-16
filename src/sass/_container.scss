@@ -4,17 +4,8 @@
   padding-right: 20px;
   margin: 0 auto;
 
-  @include screenType(mobile) {
-    width: 320px;
-  }
-  @include screenType(tablet) {
-    width: 767px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  @include screenType (desktop) {
-    width: 1200px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+    @include screenType(mobile) {
+        width: 480px;
+    }
+
 }
