@@ -5,12 +5,16 @@
   margin: 0 auto;
 
   @include screenType(mobile) {
-    min-width: 480px;
+    width: 320px;
   }
-  @include screenType(tablet) {
-    min-width: 768px;
-  }
-  @include screenType(tablet) {
-    min-width: 1200px;
-  }
+
+  //   @include screenType(mobile) {
+  //     min-width: 480px;
+  //   }
+  //   @include screenType(tablet) {
+  //     min-width: 768px;
+  //   }
+  //   @include screenType(tablet) {
+  //     min-width: 1200px;
+  //   }
 }
