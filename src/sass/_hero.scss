@@ -1,0 +1,383 @@
+.hero {
+  display: block;
+  letter-spacing: 0.04em;
+  background-color: $bgColor;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  padding-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 45px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.hero__left-side {
+  @media screen and (min-width: 768px) {
+    margin-right: auto;
+  }
+}
+
+.hero__title {
+  width: 247px;
+  margin-bottom: 32px;
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $whiteTextColor;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 367px;
+    font-size: 38px;
+    line-height: 48px;
+    margin-bottom: 28px;
+  }
+}
+
+.hero__text-span {
+  font-size: 34px;
+  line-height: calc(33 / 34);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 38px;
+    line-height: calc(38 / 48);
+  }
+}
+
+.hero__left-block {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-top: 28px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 60px;
+  }
+}
+
+.hero__plate {
+  width: 152px;
+
+  @media screen and (min-width: 1200px) {
+    width: 225px;
+  }
+}
+
+.hero__plate:hover {
+  transform: scale(1.05) rotate(360deg);
+}
+
+.hero__text-container {
+  position: relative;
+  margin-left: 33px;
+  width: 151px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.hero__text {
+  font-size: 12px;
+  line-height: 1.4;
+  color: $whiteTextColor;
+
+  @media screen and (min-width: 1200px) {
+    width: 230px;
+    font-size: 14px;
+  }
+}
+
+.hero__arrowmain-icon {
+  fill: $whiteTextColor;
+}
+
+.hero__right-side {
+  height: 239px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+}
+
+.hero__icecream {
+  position: absolute;
+  height: 325px;
+  left: 16%;
+  bottom: -53px;
+
+  @media screen and (min-width: 480px) {
+    height: 390px;
+    bottom: -64px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 470px;
+    bottom: -59px;
+    left: 45%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 760px;
+    bottom: -100px;
+    left: 45%;
+  }
+}
+
+.hero__figures {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 2px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 34px;
+  }
+}
+
+.hero__figure-text {
+  font-size: 8px;
+  line-height: calc(10 / 8);
+  text-align: right;
+  color: $whiteTextColor;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(17 / 14);
+  }
+}
+
+.hero__figure-span {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: right;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $blackTextColor;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 46px;
+    line-height: calc(56 / 46);
+  }
+}
+
+// -----------------------
+//      HERO BUTTONS
+// -----------------------
+.hero__btns {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+.border-btn {
+  font-family: 'Montserrat', sans-serif;
+  padding: 12px 34px;
+  background: transparent;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: $blackTextColor;
+  cursor: pointer;
+  border: 2px solid $accentColor;
+
+  &:hover {
+    border: 2px solid $btnHoverColor;
+  }
+
+  &:focus {
+    border: 2px solid $btnHoverColor;
+    color: $whiteTextColor;
+  }
+
+  &:disabled {
+    border: 2px solid $secondaryTextColor;
+  }
+}
+
+.hero__link-products {
+  color: $blackTextColor;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: calc(10 / 8);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(18 / 14);
+  }
+}
+
+.underline-btn {
+  font-family: 'Montserrat', sans-serif;
+  padding: 12px 21px 12px 22px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: $blackTextColor;
+
+  &:hover {
+    color: $btnHoverColor;
+  }
+
+  &:focus {
+    color: $whiteTextColor;
+  }
+
+  &:disabled {
+    color: $secondaryTextColor;
+  }
+}
+
+.hero__link-how-its {
+  color: $accentColor;
+  text-decoration: underline;
+}
+
+.arrow_btn {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: $blackTextColor;
+  
+  @media screen and (min-width: 768px) {
+    padding: 0px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    left: 0px;
+    bottom: 25px;
+  }
+
+  &:hover {
+    color: $btnHoverColor;
+  }
+
+  &:focus {
+    color: $whiteTextColor;
+  }
+
+  &:disabled {
+    color: $secondaryTextColor;
+  }
+}
+
+.border-btn,
+.underline-btn {
+    @media screen and (max-width: 1199px) {
+        font-weight: 600;
+        font-size: 8px;
+        line-height: 10px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 5px 10px;
+        // color: $blackTextColor;
+    }
+}
+
+.border-btn:focus .hero__link-products {
+    color: $whiteTextColor;
+}
+
+.underline-btn:hover .hero__link-how-its,
+.underline-btn:focus .hero__link-how-its {
+    color: $btnHoverColor;
+}
+
+
+
+// ----------------------------
+//           DOTS
+// ----------------------------
+.hero .container {
+  position: relative;
+  background-image: url('../images/hero/dots_s@1x.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    height: 350px;
+    background-image: url('../images/hero/dots_m@1x.png');
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    height: 572px;
+    background-image: url('../images/hero/dots_L@1x.png');
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero .container {
+    background-image: url('../images/hero/dots_s@2x.png');
+
+    @media screen and (min-width: 768px) {
+      background-image: url('../images/hero/dots_m@2x.png');
+    }
+
+    @media screen and (min-width: 1200px) {
+      background-image: url('../images/hero/dots_L@2x.png');
+    }
+  }
+}
