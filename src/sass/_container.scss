@@ -7,10 +7,12 @@
   @include screenType(mobile) {
     width: 480px;
   }
+
   @include screenType(tablet) {
     width: 768px;
   }
-  @include screenType(tablet) {
+
+  @include screenType(desktop) {
     width: 1200px;
   }
 }
