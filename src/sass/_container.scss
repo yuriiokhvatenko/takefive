@@ -5,6 +5,14 @@
   margin: 0 auto;
 
   @include screenType(mobile) {
-    width: 320px;
+    width: 480px;
+  }
+
+  @include screenType(tablet) {
+    width: 768px;
+  }
+
+  @include screenType(desktop) {
+    width: 1200px;
   }
 }
