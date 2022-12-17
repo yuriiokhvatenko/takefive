@@ -1,15 +1,15 @@
 .swiper {
   max-width: 280px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
     max-width: 705px;
-    margin-bottom: 124px;
+    margin-bottom: 80px;
   }
 
   @media screen and (min-width: 1200px) {
     max-width: 968px;
-    margin-bottom: 144px;
+    margin-bottom: 100px;
   }
 }
 
