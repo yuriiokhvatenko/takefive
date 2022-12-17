@@ -1,41 +1,46 @@
-.contacts {
+// section contacts
 
+.contacts {
   font-family: 'Montserrat', sans-serif;
 
-  // ::::::::::::::::::::::::::::::::::::::::::::::::
   // media mob
   @media screen and (max-width: 767px) {
     padding-bottom: 60px;
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 353px, $bgColor 353px, $bgColor 100%);
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 0%,
+     rgba(0, 0, 0, 0) 353px, 
+      $bgColor 353px, 
+      $bgColor 100%);
   }
 
-  // ::::::::::::::::::::::::::::::::::::::::::::::::
-
-  // ::::::::::::::::::::::::::::::::::::::::::::::::
   // media tab
   @media screen and (min-width: 768px) {
     padding-bottom: 40px;
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 299px, $bgColor 299px, $bgColor 100%);
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 0%, 
+      rgba(0, 0, 0, 0) 299px, 
+      $bgColor 299px, 
+      $bgColor 100%);
   }
 
-  // ::::::::::::::::::::::::::::::::::::::::::::::::
-
-  // ::::::::::::::::::::::::::::::::::::::::::::::::
   //  media desk
   @media screen and (min-width: 1200px) {
 
     padding-bottom: 120px;
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 132px, $bgColor 132px, $bgColor 100%);
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 132px,
+      $bgColor 132px, 
+      $bgColor 100%);
   }
-
-  // ::::::::::::::::::::::::::::::::::::::::::::::::
 }
 
-// ::::::::::::::::::::::::
+// :::::::::::::::
 // contacts list
+// :::::::::::::::
 
 .contacts__list {
   display: flex;
@@ -43,104 +48,66 @@
   align-items: center;
   gap: 16px;
 
-  // :::::::::::::::::::::::::::::::::::::::
-  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-  // margin
-
-  // :::::::::::::::::::::::::::::::::::::::
   // -setting media mob
   &-setting {
     @media screen and (max-width: 767px) {
       margin-bottom: 20px;
     }
 
-    // :::::::::::::::::::::::::::::::::::::::
-
-    // :::::::::::::::::::::::::::::::::::::::
     // -setting media tab
     @media screen and (min-width: 768px) {
       margin-bottom: 40px;
     }
 
-    // :::::::::::::::::::::::::::::::::::::::
-
-    // :::::::::::::::::::::::::::::::::::::::
     // -setting media desk
     @media screen and (min-width: 1200px) {
       margin-bottom: 60px;
     }
-
-    // :::::::::::::::::::::::::::::::::::::::
   }
 
-  // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-  // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  // :::::::::::::
   // media tab
   @media screen and (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // media desk
   @media screen and (min-width: 1200px) {
-
     gap: 32px;
   }
-
-  // :::::::::::::::::::::::::::::::::::::::::::::::::::
 }
 
 .contacts__list-item {
-
   background-color: $whiteTextColor;
-
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 
-  // :::::::::::::::::::::::::::::::::::::::
   // mob
   @media screen and (max-width: 767px) {
-
     width: 280px;
-
     padding: 40px 32px 24px;
 
     border-radius: 24px;
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // tab
   @media screen and (min-width: 768px) {
-
     width: 224px;
-
     padding: 40px 24px;
 
     border-radius: 24px;
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // desk
   @media screen and (min-width: 1200px) {
-
     width: 368px;
-
     padding: 40px 40px;
   }
-
-  // :::::::::::::::::::::::::::::::::::::::
 }
 
-// :::::::::::::::::::::::::::::::::::::::
+// :::::::::::::::
 // contacts card
-// :::::::::::::::::::::::::::::::::::::::
+// :::::::::::::::
 
 .contacts__category {
   display: inline-block;
@@ -150,8 +117,7 @@
   background-color: $accentColor;
   border-radius: 4px;
 
-  // :::::::::::::::::::::::::::::::::::::::
-  // mob
+  // media mob
   @media screen and (max-width: 767px) {
     margin-bottom: 20px;
     padding: 4px 22px;
@@ -159,7 +125,6 @@
     @include font (500, 12px, 14px, 0.04em);
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
   // tab
   @media screen and (min-width: 768px) {
     margin-bottom: 32px;
@@ -169,27 +134,17 @@
 
     border-radius: 6px;
 
-    // :::::::::::::::::::::::::::::::::::::::
     // contacts category media tab padding card two
     &--padding-tab {
       padding: 4px 10px;
     }
-
-    // :::::::::::::::::::::::::::::::::::::::
   }
 
-  // ::::::::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // desk
   @media screen and (min-width: 1200px) {
     padding: 4px 14px;
   }
-
-  // :::::::::::::::::::::::::::::::::::::::
 }
-
-// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 // :::::::::::::::::::::::::
 // location
@@ -201,7 +156,6 @@
   display: flex;
   flex-direction: column;
 
-  // :::::::::::::::::::::::::::::::::::::::
   // after
   &::after {
     content: '';
@@ -216,46 +170,33 @@
 
     background-color: #E1E1E1;
 
-    // :::::::::::::::::::::::::::::::::::::::
     // media after mob translateY
     @media screen and (max-width: 767px) {
       transform: translateY(24px);
     }
 
-    // :::::::::::::::::::::::::::::::::::::::
     // media after tab/desk translateY
     @media screen and (min-width: 768px) {
       transform: translateY(32px);
     }
-
-    // :::::::::::::::::::::::::::::::::::::::
   }
 
-  // :::::::::::::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // media mob
   @media screen and (max-width: 767px) {
     margin-bottom: 48px;
     gap: 8px;
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
   // media tab
   @media screen and (min-width: 768px) {
     margin-bottom: 64px;
     gap: 12px;
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // media desk
   @media screen and (min-width: 1200px) {
     gap: 8px;
   }
-
-  // :::::::::::::::::::::::::::::::::::::::
 }
 
 .contacts__location-text {
@@ -263,39 +204,26 @@
 
   color: $blackTextColor;
 
-  // :::::::::::::::::::::::::::::::::::::::
   // media mob
   @media screen and (max-width: 767px) {
     @include font (500, 12px, 22px, 0.04em);
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-
-  // :::::::::::::::::::::::::::::::::::::::
   // tab
   @media screen and (min-width: 768px) {
-
     @include font (500, 14px, 26px, 0.04em);
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // desk
   @media screen and (min-width: 1200px) {
-
     @include font (500, 16px, 30px, 0.04em);
   }
-
-  // :::::::::::::::::::::::::::::::::::::::
 }
 
 .contacts__location-link {
   display: block;
 
   @include font (500, 12px, 22px, 0.04em);
-
   color: $addressTextColor;
 
   // hover/focus
@@ -305,47 +233,30 @@
     text-decoration: underline;
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-  // mob
+  // media mob
   @media screen and (max-width: 767px) {
-
-    // :::::::::::::::::::::::::::::::::::::::
     // first and last link 
     &--width {
       width: 190px;
-    }
-
-    // :::::::::::::::::::::::::::::::::::::::  
+    }  
   }
 
-  // :::::::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   // tab
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     height: 71px;
 
     @include font (500, 14px, 26px, 0.04em);
 
-    // ::::::::::::::::::::::
     // second width link
     &--second-width {
       width: 158px;
     }
-
-    // :::::::::::::::::::::::
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // desk
   @media screen and (min-width: 1200px) {
-
     @include font (500, 16px, 29px, 0.04em);
   }
-
-  // :::::::::::::::::::::::::::::::::::::::
 }
 
 // ::::::::::::
@@ -361,7 +272,6 @@
 
   margin-bottom: 48px;
 
-  // :::::::::::::::::::::::
   // after
   &::after {
     content: '';
@@ -376,100 +286,65 @@
 
     background-color: #E1E1E1;
 
-    // :::::::::::::::::::::::::::::::::::::::
     // after media mob
     @media screen and (max-width: 767px) {
       transform: translateY(24px);
     }
 
-    // :::::::::::::::::::::::::::::::::::::::
-
-    // :::::::::::::::::::::::::::::::::::::::
     // after media tab
     @media screen and (min-width: 768px) {
 
       transform: translateY(32px);
     }
-
-    // :::::::::::::::::::::::::::::::::::::::   
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
   // media tab
   @media screen and (min-width: 768px) {
     margin-bottom: 64px;
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // desk
   @media screen and (min-width: 1200px) {
     gap: 12px;
   }
-
-  // :::::::::::::::::::::::::::::::::::::::
 }
 
 .contacts__week-day {
-
   color: $blackTextColor;
 
-  // :::::::::::::::::::::::::::::::::::::::
   // media mob
   @media screen and (max-width: 767px) {
     @include font (500, 12px, 22px, normal);
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // media tab
   @media screen and (min-width: 768px) {
     @include font (500, 14px, 26px, normal);
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // media desk
   @media screen and (min-width: 1200px) {
     @include font (500, 16px, 30px, 0.04em);
   }
-
-  // :::::::::::::::::::::::::::::::::::::::
 }
 
 .contacts__week-time {
-
   color: $secondaryTextColor;
 
-  // :::::::::::::::::::::::::::::::::::::::
   // media mob
   @media screen and (max-width: 767px) {
-
     @include font (500, 12px, 22px, normal);
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // media tab
   @media screen and (min-width: 768px) {
-
     @include font (500, 14px, 26px, normal);
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // media desk
   @media screen and (min-width: 1200px) {
-
     @include font (500, 16px, 30px, normal);
   }
-
-  // :::::::::::::::::::::::::::::::::::::::
 }
 
 // :::::::::::::::::
@@ -480,21 +355,15 @@
   display: flex;
   flex-direction: column;
 
-  // :::::::::::::::
   // mob
   @media screen and (max-width: 767px) {
     gap: 6px;
   }
 
-  // :::::::::::::::
-
-  // :::::::::::::::
   // tab/desk
   @media screen and (min-width: 768px) {
     gap: 4px;
   }
-
-  // :::::::::::::::
 }
 
 .contacts__communication-link {
@@ -502,32 +371,20 @@
 
   color: $blackTextColor;
 
-  // ::::::::::::::::::::::::::::::::::::::
   // media mob
   @media screen and (max-width: 767px) {
-
     @include font (500, 12px, 19px, normal);
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // media tab
   @media screen and (min-width: 768px) {
-
     @include font (500, 14px, 21px, normal);
   }
 
-  // :::::::::::::::::::::::::::::::::::::::
-
-  // :::::::::::::::::::::::::::::::::::::::
   // media desk
   @media screen and (min-width: 1200px) {
-
     @include font (500, 16px, 24px, normal);
   }
-
-  // :::::::::::::::::::::::::::::::::::::::
 }
 
 // :::::::::::::::
@@ -539,14 +396,11 @@
   justify-content: center;
   gap: 16px;
 
-  // :::::::::::::::::::::::::::::::::::::::
-  // mob
+  // media mob
   @media screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
   }
-
-  // :::::::::::::::::::::::::::::::::::::::
 }
 
 .contacts__btn {
@@ -592,9 +446,12 @@
 
       outline: transparent;
     }
-  }
 
-  // :::::::::::::::::::::::::::::::::::::::
+    // disabled
+    &:disabled {
+      background-color: $secondaryTextColor;
+    }
+  }
 
   // ::::::::::::::::
   // btn franchise
@@ -622,9 +479,12 @@
 
       outline: transparent;
     }
-  }
 
-  // :::::::::::::::::::::::::::::::::::::::
+    // disabled
+    &:disabled {
+      border-color: $secondaryTextColor;
+    }
+  }
 }
 
 /* visually-hidden */
