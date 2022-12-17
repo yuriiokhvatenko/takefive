@@ -1,0 +1,46 @@
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: #444;
+    cursor: pointer;
+}
+
+.modal__title {
+    font-family: 'Seymour One';
+    @include font(400, 16px, 24px, normal);
+    text-align: center;
+    color: $blackTextColor;
+
+    margin-bottom: 20px;
+
+    @include screenType (tablet) {
+        @include font(400, 20px, 28px, normal);
+    }
+
+}
+
+.modal__iframe {
+    margin-bottom: 20px;
+    @include font (400, 14px, 20px, normal);
+
+    @include screenType (tablet) {
+        @include font (400, 16px, 22px, normal);
+        width: 448px;
+        margin-bottom: 32px;
+    }
+}
+
+.modal__about {
+    padding: 28px;
+    width: 280px;
+
+    @include screenType (tablet) {
+        width: 568px;
+        padding: 32px 60px;
+    }
+}
