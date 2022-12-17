@@ -1,137 +1,137 @@
 .header {
-    display: block;
-    padding-top: 12px;
-    letter-spacing: .04em;
-    background-color: $bgColor;
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
+  display: block;
+  padding-top: 12px;
+  letter-spacing: 0.04em;
+  background-color: $bgColor;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
 
-    @media screen and (min-width: 768px) {
-        padding-top: 24px;
-    }
+  @media screen and (min-width: 768px) {
+    padding-top: 24px;
+  }
 
-    @media screen and (min-width: 1200px) {
-        padding-top: 28px;
-    }
+  @media screen and (min-width: 1200px) {
+    padding-top: 28px;
+  }
 }
 
 .container {
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 
-    @media screen and (min-width: 480px) {
-        width: 480px;
-    }
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
 
-    @media screen and (min-width: 768px) {
-        width: 768px;
-        padding-left: 32px;
-        padding-right: 32px;
-    }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-    @media screen and (min-width: 1200px) {
-        width: 1200px;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .header__nav {
-    display: flex;
+  display: flex;
 
-    @media screen and (min-width: 1200px) {
-        justify-content: space-between;
-    }
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
 }
 
 .header__nav_list {
-    display: none;
-    z-index: 10;
+  display: none;
+  z-index: 10;
 
-    @media screen and (min-width: 1200px) {
-        display: flex;
-        align-items: center;
-        gap: 27px;
-    }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+  }
 }
 
 .header__list-link {
-    display: flex;
-    align-items: center;
-    color: $whiteTextColor;
-    padding: 15px 0;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(20 / 16);
+  display: flex;
+  align-items: center;
+  color: $whiteTextColor;
+  padding: 15px 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(20 / 16);
 
-    &:hover,
-    &:focus {
-        color: $accentColor;
-        border: transparent;
-    }
+  &:hover,
+  &:focus {
+    color: $accentColor;
+    border: transparent;
+  }
 }
 
 .header__logo-link {
-    width: 40px;
-    height: 37px;
+  width: 40px;
+  height: 37px;
 
-    @media screen and (min-width: 1200px) {
-        width: 60px;
-        height: 65px;
-    }
+  @media screen and (min-width: 1200px) {
+    width: 60px;
+    height: 65px;
+  }
 }
 
 .header__burger-btn {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $blackTextColor;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 10;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $blackTextColor;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
 
-    @media screen and (min-width: 1200px) {
-        display: none;
-    }
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 }
 
 .header__buy-now-btn {
-    font-family: 'Montserrat', sans-serif;
-    padding: 12px 34px;
-    background: $accentColor;
-    border: none;
-    border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 12px 34px;
+  background: $accentColor;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: $blackTextColor;
+
+  &:hover {
+    background: $btnHoverColor;
+  }
+
+  &:focus {
+    background: $btnHoverColor;
+    color: $whiteTextColor;
+  }
+
+  &:disabled {
+    background: $secondaryTextColor;
+  }
+
+  display: none;
+  z-index: 10;
+
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
-    text-align: center;
-    cursor: pointer;
-    color: $blackTextColor;
-
-    &:hover {
-        background: $btnHoverColor;
-    }
-
-    &:focus {
-        background: $btnHoverColor;
-        color: $whiteTextColor;
-    }
-
-    &:disabled {
-        background: $secondaryTextColor;
-    }
-
-    display: none;
-    z-index: 10;
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        z-index: 5;
-        margin: auto 0 auto 32px;
-    }
+    gap: 8px;
+    z-index: 5;
+    margin: auto 0 auto 32px;
+  }
 }
