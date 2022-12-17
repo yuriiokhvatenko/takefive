@@ -1,0 +1,29 @@
+.ftr {
+    // display: block;
+    letter-spacing: 0.04em;
+    background-color: $bgColor;
+    font-family: Montserrat, sans-serif;
+}
+
+.ftr__container {
+    display: flex;
+
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.ftr__slogan {
+    font-size: 14px;
+}
+
+.ftr__accentslogan {
+    font-size: 20px;
+}
+
+.ftr__list {
+    display: flex;
+}
+
+// .ftr__icon {
+//     background-color: teal;
+//     fill: #fff
+// }
