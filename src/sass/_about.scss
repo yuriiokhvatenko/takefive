@@ -1,0 +1,221 @@
+.about {
+    background-color: $bgColor;
+
+    padding-top: 61px;
+    padding-bottom: 50px;
+
+    &__uppertittle {
+        @include font (800, 18px, 22px, normal);
+
+        text-align: center;
+
+        text-transform: uppercase;
+
+        color: $whiteTextColor;
+
+        margin-bottom: 12px;
+
+        @include screenType (tablet) {
+            @include font (800, 22px, 27px, 0.04em);
+        }
+
+        @include screenType (desktop) {
+            @include font (800, 30px, 37px, 0.04em);
+        }
+    }
+
+    &__tittle {
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
+
+        font-family: 'Seymour One';
+        @include font (400, 30px, 38px, 0.04em);
+
+        text-align: center;
+
+        text-transform: uppercase;
+
+        color: $whiteTextColor;
+
+        @include screenType (tablet) {
+            @include font (400, 34px, 43px, 0.06em);
+            max-width: 457px;
+            margin-bottom: 72px;
+
+        }
+
+        @include screenType (desktop) {
+            @include font (400, 36px, 45px, 0.06em);
+            max-width: 483px;
+            margin-bottom: 82px;
+        }
+    }
+
+    &__content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 280px;
+
+        @include screenType (tablet) {
+            display: flex;
+            gap: 38px;
+            max-width: 704px;
+        }
+
+        @include screenType (desktop) {
+            gap: 109px;
+            max-width: 1168px;
+        }
+    }
+
+    &__overlay {
+        position: relative;
+        display: block;
+        max-width: 278px;
+        height: 278px;
+        background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)),
+            #D9D9D9;
+        border-radius: 50%;
+        margin-bottom: 62px;
+
+        @include screenType(tablet) {
+            max-width: none;
+            width: 330px;
+            height: 330px;
+        }
+
+        @include screenType (desktop) {
+            max-width: none;
+            width: 490px;
+            height: 490px;
+        }
+    }
+
+    &__cow {
+        position: absolute;
+        border-radius: 50%;
+        transform: translateY(22px);
+
+        @include screenType (tablet) {
+            transform: translateY(26px);
+        }
+
+        @include screenType (desktop) {
+            transform: translateY(39px);
+        }
+    }
+
+    &__description {
+        text-align: center;
+    }
+
+    &__item {
+        max-width: 230px;
+        margin-left: auto;
+        margin-right: auto;
+        @include font (400, 12px, 21px, 0.04em);
+        text-align: center;
+        color: $whiteTextColor;
+
+        @include screenType (tablet) {
+            max-width: 334px;
+            text-align: left;
+        }
+
+        @include screenType (desktop) {
+            max-width: 463px;
+            @include font (400, 16px, 28px, 0.04em);
+        }
+    }
+
+    &__item:nth-child(2) {
+        @include font (400, 12px, 19px, 0.04em);
+
+        @include screenType (tablet) {
+            @include font (400, 12px, 21px, 0.04em);
+        }
+
+        @include screenType (desktop) {
+            @include font (400, 14px, 27px, 0.04em);
+        }
+    }
+
+    &__item:nth-child(3) {
+        display: none;
+
+        @include screenType (tablet) {
+            display: block;
+            @include font (400, 12px, 23px, 0.04em);
+        }
+
+        @include screenType (desktop) {
+            @include font (400, 14px, 27px, 0.04em);
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 4px;
+
+        @include screenType (tablet) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__list {
+        margin-bottom: 10px;
+
+        @include screenType (tablet) {
+            margin-bottom: 32px;
+        }
+
+        @include screenType (desktop) {
+            padding-top: 90px;
+            margin-bottom: 54px;
+        }
+
+    }
+
+    &__button {
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+
+        @include screenType (tablet) {
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+        align-items: center;
+
+        padding: 12px 34px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+
+        @include font (600, 14px, 18px, normal);
+        color: #000;
+        background-color: $accentColor;
+    }
+
+    &__button:hover {
+        background-color: $btnHoverColor;
+    }
+
+    &__button:focus {
+        background-color: $btnHoverColor;
+        color: #fff;
+        fill: #fff;
+    }
+
+    &__button:disabled {
+        background-color: $secondaryTextColor;
+    }
+
+
+
+}
