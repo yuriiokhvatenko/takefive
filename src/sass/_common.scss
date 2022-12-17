@@ -1,5 +1,32 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url(../images/background/bg@1x.jpg);
+
+    @include screenType (retina) {
+        background: url(../images/background/bg@2x.jpg);
+    }
+
+    @include screenType (tablet) {
+        background: url(../images/background/bg_md@1x.jpg);
+        @include screenType (retina) {
+            background: url(../images/background/bg_md@2x.jpg);
+        }
+    @include screenType (desktop) {
+        background: url(../images/background/bg_lg@1x.jpg);
+        @include screenType (retina) {
+            background: url(../images/background/bg_lg@2x.jpg);
+        }
+    }    
+    }
+
+    // background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+
 .list {
     list-style: none;
 }
@@ -7,4 +34,59 @@
 .link {
     text-decoration: none;
     color: currentColor;
+}
+
+// Стилі для бекдропа
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 45, 0, .3);
+    z-index: 20;
+    transition: .3s all;
+}
+
+.modal {
+
+    /* Скрываем окна  */
+    opacity: 0;
+    visibility: hidden;
+
+
+    /*  Установаем ширину окна  */
+    width: 280px;
+    height: auto;
+
+    @include screenType (tablet) {
+        width: 568px;
+    }
+
+    /*  Центрируем и задаем z-index */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    /* Должен быть выше чем у подложки*/
+
+    /*  Побочные стили   */
+    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+    text-align: center;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: 0.3s all;
+}
+
+// /* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
