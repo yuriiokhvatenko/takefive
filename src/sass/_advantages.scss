@@ -61,7 +61,7 @@
       margin-bottom: 0px;
     }
   }
-
+  // Comments: за ТЗ вимога відобразити іконки PNG файлами, проте оптимально є SVG - що можна розкоментувати та прибрати зайві файли з IMG.
   &::before {
     display: block;
     margin-left: auto;
@@ -72,7 +72,8 @@
     height: 50px;
     border-radius: 50%;
     background-color: $accentColor;
-    background-size: 36px 36px;
+    // background-size: 36px 36px;
+    background-size: 50px 50px;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -87,15 +88,31 @@
 }
 
 .icon-cow::before {
-  background-image: url(../images/advantages/icon-cow.svg);
+  // background-image: url(../images/advantages/icon-cow.svg);
+
+  background-image: url(../images/advantages/cow@1x.png);
+
+  @include screenType(retina) {
+    background-image: url(../images/advantages/cow@2x.png);
+  }
 }
 
 .icon-waight::before {
-  background-image: url(../images/advantages/icon-weight.svg);
+  // background-image: url(../images/advantages/icon-weight.svg);
+  background-image: url(../images/advantages/weight@1x.png);
+
+  @include screenType(retina) {
+    background-image: url(../images/advantages/weight@2x.png);
+  }
 }
 
 .icon-icecrema::before {
-  background-image: url(../images/advantages/icon-ice_crema.svg);
+  // background-image: url(../images/advantages/icon-ice_crema.svg);
+  background-image: url(../images/advantages/icecrema@1x.png);
+
+  @include screenType(retina) {
+    background-image: url(../images/advantages/icecrema@2x.png);
+  }
 }
 
 .advantages__titel {
@@ -128,7 +145,7 @@
   @include screenType(tablet) {
     @include font(400, 14px, 24px, normal);
     width: 152px;
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   @include screenType(desktop) {
