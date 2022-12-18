@@ -39,6 +39,10 @@
     padding: 28px;
     width: 280px;
 
+    background-color: $whiteTextColor;
+    border: 2px solid $accentColor;
+    border-radius: 10px;
+
     @include screenType (tablet) {
         width: 568px;
         padding: 32px 60px;
