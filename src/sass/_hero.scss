@@ -139,26 +139,26 @@
 
 .hero__icecream {
   position: absolute;
-  height: 325px;
-  left: 16%;
-  bottom: -53px;
+  content: '';
+  bottom: 0;
+  left: 85;
+  z-index: 3;
 
-  @media screen and (min-width: 480px) {
-    height: 390px;
-    bottom: -64px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    padding-left: 20px;
   }
 
   @media screen and (min-width: 768px) {
-    height: 470px;
-    bottom: -59px;
-    left: 45%;
+    bottom: 0;
+    left: 415;
+    width: 300px;
   }
 
-  @media screen and (min-width: 1200px) {
-    height: 760px;
-    bottom: -100px;
-    left: 45%;
-  }
+    @media screen and (min-width: 1200px) {
+        bottom: 0;
+        left: 650;
+        width: 400px;
+      }
 }
 
 .hero__figures {
@@ -290,7 +290,7 @@
   text-align: center;
   cursor: pointer;
   color: $blackTextColor;
-  
+
   @media screen and (min-width: 768px) {
     padding: 0px;
     position: absolute;
@@ -319,28 +319,26 @@
 
 .border-btn,
 .underline-btn {
-    @media screen and (max-width: 1199px) {
-        font-weight: 600;
-        font-size: 8px;
-        line-height: 10px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        padding: 5px 10px;
-        // color: $blackTextColor;
-    }
+  @media screen and (max-width: 1199px) {
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 5px 10px;
+    // color: $blackTextColor;
+  }
 }
 
 .border-btn:focus .hero__link-products {
-    color: $whiteTextColor;
+  color: $whiteTextColor;
 }
 
 .underline-btn:hover .hero__link-how-its,
 .underline-btn:focus .hero__link-how-its {
-    color: $btnHoverColor;
+  color: $btnHoverColor;
 }
-
-
 
 // ----------------------------
 //           DOTS
