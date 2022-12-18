@@ -9,13 +9,66 @@
 
 <!-- Несколько модальных окон -->
 
-<!-- <div class="modal" data-modal="1">
-    <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path
-            d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+<div class="modal modal__hero" data-modal="1">
+  <button class="modal__hero--button js-modal-close" type="button" >
+    <svg class="close-btn-icon" width="20" height="20">
+      <use href="./images/sprite.svg#icon-clarity_close-line" width="20" height="20"></use>
     </svg>
-    <p class="modal__title">Заголовок окна 1</p>
-</div> -->
+  </button>
+  <p class="modal__hero--title">Buy now</p>
+  <form class="modal__hero--form">
+    <label class="form__product">
+      <input class="form__product--checkbox" type="checkbox" name="Ice-cream" >
+      <div class="checkbox-container ice-cream">
+        <div class="ice-cream__overlay">
+          <picture>
+            <source media="(min-width: 320px)" type="image/png" srcset="./images/hero/ice-cream-x1.png 1x, ./images/hero/ice-cream-x2.png 2x" />
+            <img class="ice-cream__overlay--image" src="./images/hero/ice-cream-x1.png" alt="ice-cream">
+          </picture>
+        </div>
+        <span class="ice-cream--title">Ice cream</span>
+      </div>
+    </label>
+    <label class="form__product">
+      <input class="form__product--checkbox" type="checkbox" name="ice coffee" >
+      <div class="checkbox-container ice-coffe">
+        <div class="ice-coffe__overlay">
+          <picture>
+            <source media="(min-width: 320px)" type="image/png" srcset="./images/hero/ice-coffe-x1.png 1x, ./images/hero/ice-coffe-x2.png 2x" />
+            <img class="ice-coffe__overlay--image" src="./images/hero/ice-coffe-x1.png" alt="ice-coffe">
+          </picture>
+          
+        </div>
+        <span class="ice-coffe--title">ice coffee</span>
+      </div>
+    </label>
+    <label class="form__product">
+      <input class="form__product--checkbox" type="checkbox" name="milkshake" required>
+      <div class="checkbox-container milkshake">
+        <div class="milkshake__overlay">
+          <picture>
+            <source media="(min-width: 320px)" type="image/png" srcset="./images/hero/milkshake-x1.png 1x, ./images/hero/milkshake-x2.png 2x" />
+            <img class="milkshake__overlay--image" src="./images/hero/milkshake-x1.png" alt="milkshake">
+          </picture>
+          
+        </div>
+        <span class="milkshake--title">milkshake</span>
+      </div>
+    </label>
+    <div class="form-group">
+      <label class="form-field">
+        <input class="form-input" type="text" name="Name" placeholder="Name" pattern="[A-Za-z]{3,32}" required>
+      </label>
+      <label class="form-field">
+        <input class="form-input" type="tel" name="Phone" placeholder="Phone" pattern="[0-9]{12}" required>
+      </label>
+      <label class="form-field">
+        <textarea class="form-message" name="Comment" cols="30" rows="2" placeholder="Comment" ></textarea>
+      </label>
+      <button class="form-btn btn" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
 
 <!-- <div class="modal" data-modal="2">
     <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

@@ -1,0 +1,320 @@
+.modal__hero {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: 280px;
+    min-height: 991px;
+    padding: 28px;
+    text-align: center;
+  
+    background-color: $whiteTextColor;
+    border: 2px solid $accentColor;
+    border-radius: 10px;
+    
+    @media screen and (min-width: 768px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      width: 568px;
+      min-height: 644px;
+    }
+  }
+  .modal__hero--button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 20px;
+    height: 20px;
+    padding: 0;
+  
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    
+
+    
+  }
+  .modal__hero--title {
+    font-family: 'Seymour One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media screen and (min-width: 768px){
+      margin-bottom: 40px;
+    }
+
+  }
+ .form-group {
+  align-items: center;
+  justify-content: center;
+  margin-top: 31px;
+  @media screen and (min-width: 768px){
+    margin-top: 40px;
+  }
+ }
+ .modal__hero--form {
+  justify-content: center;
+  align-items: center;
+ }
+ .form-field {
+  width: 224px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: 768px){
+    width: 368px;
+  }
+ }
+ .form-field:not(:last-child) {
+  display: block;
+  flex-basis: 208px;
+  position: relative;
+  margin-bottom: 12px;
+  @media screen and (min-width: 768px){
+    margin-bottom: 16px;
+  }
+}
+.form-input {
+  display: flex;
+  margin-bottom: 0;
+
+  outline: transparent;
+  width: 224px;
+  height: 32px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  
+  background: $formBgColor;
+  border: 1px solid $bgColor;
+  border-radius: 10px;
+  @media screen and (min-width: 768px) {
+    width: 368px;
+    height: 42px;
+    padding-left: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
+input:focus:invalid {
+  border: 1px solid red;
+}
+.form-message {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  outline: none;
+  padding-top: 8px;
+
+  width: 224px;
+  height: 65px;
+  padding-left: 12px;
+  
+  background: $formBgColor;
+  border: 1px solid $bgColor;
+  border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 368px;
+    height: 84px;
+    padding-left: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
+.form-btn {
+  font-family: 'Montserrat';
+  font-style: normal;
+  width: 114px;
+  height: 42px;
+  cursor: pointer;
+  
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+
+  background: $accentColor;
+  border-radius: 10px;
+  border-color: transparent;
+  margin-top: 26px;
+
+  
+  &:hover {
+      background-color: $btnHoverColor;
+  }
+  &:focus {
+    background-color: $btnHoverColor;
+    color: $whiteTextColor;
+  }
+
+  @media screen and (min-width: 768px){
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  width: 121px;
+  }
+}
+.form__product {
+  width: 132px;
+  height: 136px;
+  padding-top: 0;
+}
+.form__product--checkbox {
+  display: none;
+  cursor: pointer;
+}
+
+.checkbox-container{
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 132px;
+  height: 136px;
+  border: 2px solid tomato;
+  line-height: 1.25;
+  padding-bottom: 20px;
+  margin-top: 83px;
+  
+
+  @media screen and (min-width: 768px){
+    display: inline-block;
+    margin-top: 63px;
+    margin-right: 32px;
+    
+  }
+}
+
+.ice-cream--title {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 50px);
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $blackTextColor;
+}
+.ice-cream__overlay {
+  position: relative;
+  top: -63;
+  left: -2;
+  display: block;
+  width: 132px;
+  height: 132px;
+  background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  border-radius: 50%;
+}
+.ice-coffe__overlay {
+  position: relative;
+  top: -63;
+  left: -2;
+  display: block;
+  width: 132px;
+  height: 132px;
+  background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+  box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  border-radius: 50%;
+}
+.milkshake__overlay {
+  position: relative;
+  top: -63;
+  left: -2;
+  display: block;
+  width: 132px;
+  height: 132px;
+  background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+  box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+.ice-coffe--title {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 53px);
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $blackTextColor;
+}
+.milkshake--title {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 53px);
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $blackTextColor;
+}
+.ice-cream__overlay--image {
+  background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  border-radius: 50%;
+  position: absolute;
+  top: -7;
+  left: 0;
+}
+.ice-coffe__overlay--image {
+  position: absolute;
+  top: -7;
+  left: 0;
+}
+.milkshake__overlay--image {
+  position: absolute;
+  top: -7;
+  left: 0;
+}
+.ice-cream {
+  border: 2px solid #96AF8C;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+  border-radius: 15px;
+}
+.ice-coffe {
+  background: #EFD478;
+  border: 2px solid #EFD478;
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  border-radius: 15px;
+}
+.milkshake {
+  border: 2px solid #D6936D;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+  border-radius: 15.7808px;
+  @media screen and (min-width: 768px){
+    margin-right: 0;
+  }
+}
