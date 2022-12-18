@@ -4,9 +4,8 @@
 <!-- <a href="#" class="js-open-modal" data-modal="2">Открыть окно 2</a> -->
 <!-- <a href="#" class="js-open-modal" data-modal="3">ВИКОРИСТАН!!!Открыть окно 3</a> -->
 <!-- <a href="#" class="js-open-modal" data-modal="4">Открыть окно 4</a> -->
-<!-- <a href="#" class="js-open-modal" data-modal="5">Открыть окно 5</a> -->
+<!-- <a href="#" class="js-open-modal" data-modal="5">ВИКОРИСТАНО!!!Открыть окно 5</a> -->
 <!-- <a href="#" class="js-open-modal" data-modal="6">Открыть окно 6</a> -->
-
 
 <!-- Несколько модальных окон -->
 
@@ -80,21 +79,35 @@
 </div> -->
 
 <div class="modal modal__about" data-modal="3">
-    <!--   Svg иконка для закрытия окна  -->
-    <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path
-            d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
-    </svg>
-    <h2 class="modal__title">How it’s made?</h2>
-    <div class="modal__iframe-container">
-    <iframe class="modal__iframe" width="224" height="199" src="https://www.youtube.com/embed/HqXFosEgMTc" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-    </div>
-
-</div>  
+  <!--   Svg иконка для закрытия окна  -->
+  <svg
+    class="modal__cross js-modal-close"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+    />
+  </svg>
+  <h2 class="modal__title">How it’s made?</h2>
+  <div class="modal__iframe-container">
+    <iframe
+      class="modal__iframe"
+      width="224"
+      height="199"
+      src="https://www.youtube.com/embed/HqXFosEgMTc"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    </p>
+  </div>
+</div>
 
 <!-- <div class="modal" data-modal="4">
     <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -104,14 +117,92 @@
     <p class="modal__title">Заголовок окна 2</p>
 </div> -->
 
-<!-- <div class="modal" data-modal="5">
-      Svg иконка для закрытия окна 
-    <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path
-            d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
-    </svg>
-    <p class="modal__title">Заголовок окна 1</p>
-</div> -->
+<!-- MODAL 5 -->
+<div class="contacts__modal modal" data-modal="5">
+  <!-- modal icon close -->
+  <svg
+    class="modal__cross js-modal-close"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+    />
+  </svg>
+
+  <h2 class="contacts__modal-title">Our Locations</h2>
+
+  <!-- Slider main container -->
+  <div class="contacts__swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <iframe
+          class="contacts__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1648.4259081374512!2d-87.78024475719457!3d41.70319732047199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e39ad302b2c19%3A0xc808e9b14d04eb2b!2s10340%20Ridgeland%20Ave%2C%20Chicago%20Ridge%2C%20IL%2060415%2C%20%D0%A1%D0%A8%D0%90!5e1!3m2!1sru!2sua!4v1671149861794!5m2!1sru!2sua"
+          width="448"
+          height="260"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <div class="undertext">Chicago</div>
+      </div>
+      <div class="swiper-slide">
+        <iframe
+          class="contacts__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1832.9535289900734!2d-118.4108865015771!3d33.88308984702833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b3eca6743829%3A0x98448969b9b4373d!2s1003%20Manhattan%20Ave%2C%20Manhattan%20Beach%2C%20CA%2090266%2C%20%D0%A1%D0%A8%D0%90!5e1!3m2!1sru!2sua!4v1671149749817!5m2!1sru!2sua"
+          width="448"
+          height="260"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <div class="undertext">Los Angeles</div>
+      </div>
+      <div class="swiper-slide">
+        <iframe
+          class="contacts__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d837.2879313902899!2d-73.95506525478928!3d40.672711070953284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b9e1a049759%3A0x54b2c2c0bb508d73!2zMTQ4MCBCZWRmb3JkIEF2ZSwgQnJvb2tseW4sIE5ZIDExMjE2LCDQodCo0JA!5e1!3m2!1sru!2sua!4v1671149214132!5m2!1sru!2sua"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <div class="undertext">New York</div>
+      </div>
+    </div>
+
+    <!-- slider btn -->
+    <div class="slider-btn-box">
+      <div class="swiper-button-prev">
+        <svg class="contacts__slider-icon" width="30" height="30">
+          <use href="./images/sprite.svg#icon-contact-arrow-left"></use>
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg class="contacts__slider-icon" width="30" height="30">
+          <use href="./images/sprite.svg#icon-contact-arrow-right"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <a
+    class="contacts__btn-modal"
+    href="https://www.google.com.ua/maps/@35.6073249,-87.9738255,4.75z?hl=ru"
+    rel="noreferrer nofollow noopener"
+    target="_blank"
+  >
+    Open Map
+  </a>
+</div>
 
 <!-- <div class="modal" data-modal="6">
       Svg иконка для закрытия окна 
