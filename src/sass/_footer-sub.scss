@@ -3,14 +3,15 @@
 
   &__container {
     min-width: 280px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
 
     @include screenType(tablet) {
-      margin-bottom: 44px;
+      padding-bottom: 32px;
     }
 
     @include screenType(desktop) {
-      margin-bottom: 60px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid #e1e1e1;
     }
   }
 
@@ -88,29 +89,18 @@
     }
   }
 
-  &__border-line.bt {
-    border: 1px solid #e1e1e1;
-    margin-bottom: 20px;
-    @include screenType(tablet) {
-      margin-bottom: 12px;
-    }
-    @include screenType(desktop) {
-      max-width: 1167px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  &__copyright {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    @include screenType(tablet) {
-      display: flex;
-      justify-content: center;
-      padding-top: 12px;
-      padding-bottom: 12px;
-    }
-  }
+  // &__border-line.bt {
+  //   border: 1px solid #e1e1e1;
+  //   margin-bottom: 20px;
+  //   @include screenType(tablet) {
+  //     margin-bottom: 12px;
+  //   }
+  //   @include screenType(desktop) {
+  //     max-width: 1167px;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //   }
+  // }
 
   &__copyright-text {
     @include font(700, 14px, 21px, normal);
@@ -139,5 +129,21 @@
       display: flex;
       justify-content: space-between;
     }
+  }
+}
+
+.footer__copyright {
+  background-color: $bgColor;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include screenType(tablet) {
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  @media screen and(max-width: 1199px) {
+    border-top: 1px solid #e1e1e1;
   }
 }
