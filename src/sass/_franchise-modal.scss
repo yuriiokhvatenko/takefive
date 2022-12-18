@@ -1,5 +1,4 @@
 .container__franchise {
-    position: relative;
     background-color: #FCFCFC;
     border: 2px solid #F8D24E;
     border-radius: 10px;
@@ -11,20 +10,6 @@
     }
 }
 
-.modal__franchise {
-    
-    background-color: #FCFCFC;
-    border: 2px solid #F8D24E;
-    border-radius: 10px;
-
-    @media screen and (max-width:767.98px) {
-        
-    }
-    @media screen and (min-width: 768px) {
-        padding: 32px 60px;
-    }
-
-}
 
 .close__btn {
     position: absolute;
