@@ -1,0 +1,149 @@
+.menu-toggle {
+  min-height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  fill: $whiteTextColor;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+// .menu-toggle:hover,
+// .menu-toggle:focus {
+//   background-color: rgba(0, 0, 0, 0.1);
+// }
+
+.menu__toggle--close:hover,
+.menu__toggle--close:focus {
+  fill: $blackTextColor;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 12px 32px 64px;
+  background-color: #85a279;
+  z-index: 999;
+  overflow-y: auto;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  color: $whiteTextColor;
+}
+
+.mobile__wrapper {
+  text-align: center;
+}
+
+.mobile__nav {
+}
+
+.mobile__logo-link {
+  display: block;
+  width: 41px;
+  height: 37px;
+  margin-bottom: 51px;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 110px;
+  list-style: none;
+}
+
+.mobile-menu__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-menu__link {
+  display: block;
+
+  @include font(700, 32px, 39px);
+  color: $whiteTextColor;
+
+  text-decoration: none;
+
+  @media screen and(min-width: 380px) and(min-height: 380px) {
+    font-size: 40px;
+  }
+
+  &:focus,
+  &:hover {
+    color: $blackTextColor;
+  }
+}
+
+.mobile__buy-now-btn {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 51px 12px 36px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-family: 'Montserrat', sans-serif;
+  @include font(600, 14px, 17px);
+
+  background: $accentColor;
+  color: #000000;
+
+  @media screen and(min-width: 768px) {
+    @include font(700, 48px, 59px);
+  }
+
+  @media screen and(min-width: 767.98px) {
+    display: none;
+  }
+}
+
+.mobile__buy-now-btn:hover {
+  background: $btnHoverColor;
+  fill: currentColor;
+}
+
+.mobile__buy-now-btn:focus {
+  background: $btnHoverColor;
+  color: $whiteTextColor;
+  fill: currentColor;
+}
+
+.mobile__buy-now-btn:disabled {
+  background: $secondaryTextColor;
+  fill: currentColor;
+}
