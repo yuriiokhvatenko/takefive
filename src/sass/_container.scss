@@ -3,20 +3,20 @@
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
+  // border: 0;
 
+  @include screenType(mobile) {
+    width: 480px;
+  }
+  @include screenType(tablet) {
+    width: 767px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-    @include screenType(mobile) {
-      width: 480px;
-    }
-    @include screenType(tablet) {
-      width: 767px;
-      padding-left: 32px;
-      padding-right: 32px;
-    }
-  
-    @include screenType (desktop) {
-      width: 1200px;
-      padding-left: 16px;
-      padding-right: 16px;
-    }
+  @include screenType(desktop) {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
