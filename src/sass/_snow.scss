@@ -20,7 +20,7 @@ $grad: (
 .snow:before,
 .snow:after {
   position: absolute;
-  // pointer-events: none;
+  pointer-events: none;
   top: -$w + px;
   left: 0;
   bottom: 0;
