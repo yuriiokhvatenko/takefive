@@ -84,6 +84,9 @@
 }
 
 .form--label--franchise {
+
+    cursor: url(../images/cursor/default.png), auto;
+
     @media screen and (min-width: 768px) {
         display: flex;
         justify-content: center;
@@ -98,6 +101,7 @@
     background: rgba(248, 210, 78, 0.1);
     border: 1px solid #84A178;
     border-radius: 10px;
+    cursor: url(../images/cursor/default.png), auto;
 
     @media screen and (max-width:767.98px) {
         width: 100%;
@@ -133,7 +137,7 @@
     font-family: var(--main-font);
     font-weight: 600;
     color: var(--accent-color);
-    cursor: pointer;
+    cursor: url(../images/cursor/pointer.png), pointer;
 
     background: #F8D24E;
     border-radius: 10px;

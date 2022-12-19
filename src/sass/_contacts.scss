@@ -225,6 +225,7 @@
 
   @include font (500, 12px, 22px, 0.04em);
   color: $addressTextColor;
+  cursor: url(../images/cursor/pointer.png), pointer;
 
   // hover/focus
   &:hover,
@@ -370,6 +371,7 @@
   display: block;
 
   color: $blackTextColor;
+  cursor: url(../images/cursor/pointer.png), pointer;
 
   // media mob
   @media screen and (max-width: 767px) {
@@ -419,7 +421,7 @@
   border: transparent;
   border-radius: 10px;
 
-  cursor: pointer;
+  cursor: url(../images/cursor/pointer.png), pointer;
 
   // ::::::::::::::
   // btn location

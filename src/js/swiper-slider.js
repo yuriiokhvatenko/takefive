@@ -9,3 +9,15 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
   },
 });
+
+// contacts modal slider map
+const contactswiper = new Swiper('.contacts__swiper', {
+  // Optional parameters
+  loop: true,
+
+  // Navigation arrows
+   navigation: {
+     nextEl: '.swiper-button-next',
+     prevEl: '.swiper-button-prev',
+   },
+});

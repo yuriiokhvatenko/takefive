@@ -76,6 +76,7 @@
 
 .buy__input {
   display: none;
+  
 }
 
 .buy__input:checked {
@@ -113,6 +114,8 @@
   border-radius: 15px;
 
   transition: 300ms ease;
+
+  cursor: url(../images/cursor/pointer.png), pointer;
 
   // green
   &--green {
@@ -233,6 +236,8 @@
   background: $formBgColor;
   border: 1px solid $bgColor;
   border-radius: 10px;
+
+  cursor: url(../images/cursor/default.png), auto;
   @media screen and (min-width: 768px) {
     width: 368px;
     height: 42px;
@@ -260,6 +265,8 @@ input:focus:invalid {
   border: 1px solid $bgColor;
   border-radius: 10px;
 
+  cursor: url(../images/cursor/default.png), auto;
+
   @media screen and (min-width: 768px) {
     width: 368px;
     height: 84px;
@@ -273,7 +280,7 @@ input:focus:invalid {
   font-style: normal;
   width: 114px;
   height: 42px;
-  cursor: pointer;
+  cursor: url(../images/cursor/pointer.png), pointer;
   
   font-weight: 600;
   font-size: 12px;

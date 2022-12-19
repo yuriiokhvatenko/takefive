@@ -127,6 +127,8 @@
 
 .hero__arrowmain-icon {
   fill: $whiteTextColor;
+
+  cursor: url(../images/cursor/pointer.png), pointer;
 }
 
 .hero__right-side {
@@ -244,6 +246,7 @@
   font-weight: 600;
   font-size: 8px;
   line-height: calc(10 / 8);
+  cursor: url(../images/cursor/pointer.png), pointer;
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
@@ -278,6 +281,7 @@
 .hero__link-how-its {
   color: $accentColor;
   text-decoration: underline;
+  cursor: url(../images/cursor/pointer.png), pointer;
 }
 
 .arrow_btn {
