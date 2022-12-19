@@ -88,6 +88,10 @@
 //     }
 // }
 
+.ftr__link {
+  cursor: url(../images/cursor/pointer.png), pointer;
+}
+
 .ftr__icon {
     fill: #84a178;
 
@@ -115,6 +119,7 @@
   @include font(700, 12px, 22px, normal);
   color: $whiteTextColor;
   text-align: right;
+  cursor: url(../images/cursor/pointer.png), pointer;
   @include screenType(tablet) {
     @include font(700, 14px, 26px, normal);
   }

@@ -126,6 +126,8 @@
   backdrop-filter: blur(5px);
   border-radius: 100px;
 
+    cursor: url(../images/cursor/pointer.png), pointer;
+
   // btn prev after
   &::after {
     display: none;
@@ -159,6 +161,8 @@
   background-color: rgba(34, 31, 32, 0.346);
   backdrop-filter: blur(3px);
   border-radius: 100%;
+
+    cursor: url(../images/cursor/pointer.png), pointer;
 
   // btn next after
   &::after {
@@ -212,6 +216,7 @@
 
   background-color: rgba(34, 31, 34, 0.346);
   backdrop-filter: blur(8px);
+  
 }
 
 // ::::::::::::
@@ -228,6 +233,8 @@
 
   background-color: $accentColor;
   border-radius: 10px;
+
+    cursor: url(../images/cursor/pointer.png), pointer;
 
   // hover/focus
   &:hover {
