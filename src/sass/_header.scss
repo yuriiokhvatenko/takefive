@@ -1,140 +1,290 @@
-.header {
-  display: block;
-  padding-top: 12px;
-  letter-spacing: 0.04em;
+.page-header {
   background-color: $bgColor;
-  font-family: Montserrat, sans-serif;
-  font-size: 14px;
-
-  @media screen and (min-width: 768px) {
-    padding-top: 24px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 28px;
-  }
+  width: 100%;
+  z-index: 99;
 }
 
-.container {
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
 
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-.header__nav {
+.header-position {
   display: flex;
-
-  @media screen and (min-width: 1200px) {
-    justify-content: space-between;
-  }
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
-.header__nav_list {
-  display: none;
-  z-index: 10;
-
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: center;
-    gap: 27px;
-  }
-}
-
-.header__list-link {
+.header-buttons {
   display: flex;
   align-items: center;
-  color: $whiteTextColor;
-  padding: 15px 0;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.pages-nav__item {
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: calc(20 / 16);
-  cursor: url(../images/cursor/pointer.png), pointer;
+  line-height: 1.25;
 
-  &:hover,
-  &:focus {
-    color: $accentColor;
-    border: transparent;
-  }
-}
-
-.header__logo-link {
-  width: 40px;
-  height: 37px;
-
-  cursor: url(../images/cursor/pointer.png), pointer;
-
-  @media screen and (min-width: 1200px) {
-    width: 60px;
-    height: 65px;
-  }
-}
-
-.header__burger-btn {
-  margin-left: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: $blackTextColor;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
+  padding-top: 23px;
 
-  @media screen and (min-width: 1200px) {
+  color: $whiteTextColor;
+}
+
+
+// 0px - 767px
+@media screen and (max-width: 767px) {
+  .pages-nav {
+    display: none;
+  }
+
+  .contact-list {
     display: none;
   }
 }
 
-.header__buy-now-btn {
-  font-family: 'Montserrat', sans-serif;
-  padding: 12px 34px;
-  background: $accentColor;
+.open-mobile-menu-btn {
+  line-height: 0;
   border: none;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  cursor: url(../images/cursor/pointer.png), pointer;
+  background-color: transparent;
+  padding: 0;
+  margin-left: auto;
+
+  &:focus,
+  &:hover {
+    fill: $accentColor;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+}
+
+
+
+.open-mobile-menu-btn__icon {
+  width: 32px;
+  height: 32px;
+}
+
+// 768px - 1200px
+@media screen and (min-width: 768px) {
+  .header-position {
+    align-items: center;
+    padding-top: 2px;
+    padding-bottom: 10px;
+  }
+
+  .open-mobile-menu-btn {
+    line-height: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+
+    &:focus,
+    &:hover {
+      fill: $accentColor;
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-buttons {
+    padding-top: 10px;
+  }
+
+  .pages-nav {
+    display: none;
+  }
+}
+
+// 1200px - etc.
+@media screen and (min-width: 1200px) {
+  .header-position {
+    padding-top: 2px;
+    padding-bottom: 13px;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-nav__logo {
+    margin-right: 269px;
+  }
+
+  .pages-nav {
+    display: flex;
+    column-gap: 27px;
+  }
+
+  .navigation-link {
+    color: $whiteTextColor;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+      cursor: pointer;
+    }
+  }
+
+  .open-mobile-menu-btn {
+    display: none;
+  }
+}
+
+// Container
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+
+// Buy Now Button
+
+.button__buy-now {
+  background-color: $accentColor;
+  border: transparent;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.28;
   color: $blackTextColor;
+  padding: 12px 34px;
+  min-width: 152px;
+  border-radius: 10px;
 
   &:hover {
-    background: $btnHoverColor;
+    background-color: $btnHoverColor;
   }
 
   &:focus {
-    background: $btnHoverColor;
+    background-color: $btnHoverColor;
     color: $whiteTextColor;
   }
+}
 
-  &:disabled {
-    background: $secondaryTextColor;
+@media screen and (max-width: 767px) {
+  .button__buy-now {
+    display: none;
+  }
+}
+
+/* 768px + */
+
+@media screen and (min-width: 768px) {
+  .button__buy-now {
+    background-color: $accentColor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.28;
+    color: $blackTextColor;
+    padding: 12px 34px;
+    padding-right: 28px;
+    min-width: 152px;
+    height: 42px;
+    border-radius: 10px;
+    gap: 7.23px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 32px;
+
+    &:hover {
+      background-color: $btnHoverColor;
+      cursor: pointer;
+    }
+
+    &:focus {
+      background-color: $btnHoverColor;
+      color: $whiteTextColor;
+
+      .buy-now-icon {
+        fill: $whiteTextColor;
+      }
+    }
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
   }
 
-  display: none;
-  z-index: 10;
+  .buy-now-icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 6px;
+  }
+}
 
-  @media screen and (min-width: 768px) {
+/* 1200px +*/
+
+@media screen and (min-width: 1200px) {
+  .button__buy-now {
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 8px;
-    z-index: 5;
-    margin: auto 0 auto 32px;
+    margin-left: auto;
+
+    &:hover {
+      background-color: $btnHoverColor;
+      cursor: pointer;
+    }
+
+    &:focus {
+      background-color: $btnHoverColor;
+      color: $whiteTextColor;
+
+      .buy-now-icon {
+        fill: $whiteTextColor;
+      }
+    }
+  }
+
+  .buy-now-icon {
+    width: 12px;
+    height: 12px;
   }
 }
