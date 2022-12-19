@@ -1,4 +1,6 @@
 .gallery {
+  margin-bottom: 80px;
+  height: 130px;
   background-image: linear-gradient(
     to bottom,
     $bgColor 25%,
@@ -7,6 +9,8 @@
   );
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 100px;
+    height: 327px;
     background-image: linear-gradient(
       to bottom,
       $bgColor 44%,
@@ -16,6 +20,8 @@
   }
 
   @media screen and (min-width: 1200px) {
+    margin-bottom: 140px;
+    height: 422px;
     background-image: linear-gradient(
       to bottom,
       $bgColor 23%,
@@ -26,21 +32,16 @@
 
   &__wrapper {
     margin: 0 auto;
-    margin-bottom: 80px;
     max-width: 280px;
-    height: 130px;
+
     position: relative;
 
     @media screen and (min-width: 768px) {
-      margin-bottom: 100px;
       max-width: 704px;
-      height: 327px;
     }
 
     @media screen and (min-width: 1200px) {
-      margin-bottom: 140px;
       max-width: 1013px;
-      height: 422px;
     }
   }
 
