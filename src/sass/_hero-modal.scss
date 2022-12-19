@@ -7,7 +7,7 @@
   
     width: 280px;
     min-height: 991px;
-    padding: 28px;
+    // padding: 28px;
     text-align: center;
   
     background-color: $whiteTextColor;
@@ -15,8 +15,7 @@
     border-radius: 10px;
     
     @media screen and (min-width: 768px) {
-      padding-top: 32px;
-      padding-bottom: 32px;
+      padding: 32px 54px;
       width: 568px;
       min-height: 644px;
     }
@@ -51,11 +50,145 @@
     margin-top: 0;
     margin-bottom: 0;
 
-    @media screen and (min-width: 768px){
-      margin-bottom: 40px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 83px;
     }
 
+     @media screen and (min-width: 768px){
+       margin-bottom: 103px;
+     }
+
   }
+
+// =============================================================
+// checkbox
+
+.buy__list {
+  display: flex;
+  gap: 32px;
+
+  // mob
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    gap: 82px;
+  }
+}
+
+.buy__input {
+  display: none;
+}
+
+.buy__input:checked {
+
+  // green
+  &+.buy__span-box--green {
+    background-color: $bgColor;
+
+    transform: scale(1.02);
+  }
+
+  // yellow
+  &+.buy__span-box--yellow {
+    background-color: $accentColor;
+
+    transform: scale(1.02);
+  }
+
+  // red
+  &+.buy__span-box--red {
+    background-color: $addressTextColor;
+
+    transform: scale(1.02);
+  }
+
+}
+
+.buy__span-box {
+  position: relative;
+
+  display: inline-block;
+  width: 132px;
+  height: 135px;
+
+  border-radius: 15px;
+
+  transition: 300ms ease;
+
+  // green
+  &--green {
+    border: 2px solid $bgColor;
+  }
+
+  // yellow
+  &--yellow {
+    border: 2px solid $accentColor;
+  }
+
+  // red
+  &--red {
+    border: 2px solid $addressTextColor;
+  }
+}
+
+.buy__span-img-box {
+  position: relative;
+  bottom: 59px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: block;
+  width: 132px;
+  height: 132px;
+
+  overflow: hidden;
+
+  border-radius: 100%;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+
+  // green
+  &--green {
+    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  }
+
+  // yellow
+  &--yellow {
+    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  }
+
+  // red
+  &--red {
+    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+  }
+
+}
+
+.buy__img {
+  border-radius: 100%;
+  overflow: hidden;
+  transform: translateY(-7px);
+}
+
+.buy__img-span-text {
+  display: block;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  text-align: center;
+
+  width: 106px;
+
+  @include font (700, 16px, 20px, 0.04em);
+  text-transform: uppercase;
+}
+
+// =============================================================
+
+
  .form-group {
   align-items: center;
   justify-content: center;

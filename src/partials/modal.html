@@ -15,7 +15,7 @@
     </svg>
   </button>
   <p class="modal__hero--title">Buy now</p>
-  <form class="modal__hero--form">
+  <!-- <form class="modal__hero--form">
     <label class="form__product">
       <input class="form__product--checkbox" type="checkbox" name="Ice-cream" >
       <div class="checkbox-container ice-cream">
@@ -53,7 +53,98 @@
         </div>
         <span class="milkshake--title">milkshake</span>
       </div>
-    </label>
+    </label> -->
+
+    <form class="hero__buy-modal">
+          <ul class="buy__list">
+            <li class="buy__item">
+              <label>
+            <input class="buy__input" type="checkbox" name="ice-cream" values="ice-cream" />
+            <span class="buy__span-box buy__span-box--green">
+              <span class="buy__span-img-box buy__span-img-box--green">
+                <picture>
+
+                  <source              
+                  srcset="
+                    ./images/modal-buy-now/img1lg@1x.webp 1x,
+                    ./images/modal-buy-now/img1lg@2x.webp 2x
+                  "
+                />
+
+                  <source
+                  srcset="
+                    ./images/modal-buy-now/img1lg@1x.jpg 1x,
+                    ./images/modal-buy-now/img1lg@2x.jpg 2x
+                  "
+                />
+                <img class="buy__img" src="./images/modal-buy-now/img1lg@1x.jpg" alt="test">
+                </picture>
+              </span>
+              <p class="buy__img-span-text">ice cream</p>
+            </span>
+          </label>
+            </li>
+
+            <li class="buy__item">
+              <label>
+            <input class="buy__input" type="checkbox" name="ice-cream" values="ice-coffee" />
+            <span class="buy__span-box buy__span-box--yellow">
+              <span class="buy__span-img-box buy__span-img-box--yellow">
+               <picture>
+
+                <source
+                  srcset="
+                    ./images/modal-buy-now/img2lg@1x.webp 1x,
+                    ./images/modal-buy-now/img2lg@2x.webp 2x
+                  "
+                />
+
+                  <source
+                  srcset="
+                    ./images/modal-buy-now/img2lg@1x.jpg 1x,
+                    ./images/modal-buy-now/img2lg@2x.jpg 2x
+                  "
+                />
+                <img class="buy__img" src="./images/modal-buy-now/img2lg@1x.jpg" alt="test">
+                </picture>
+              </span>
+              <p class="buy__img-span-text">ice coffee</p>
+            </span>
+          </label>
+            </li>
+
+            <li class="buy__item">
+              <label>
+            <input class="buy__input" type="checkbox" name="ice-cream" values="milkshake"/>
+            <span class="buy__span-box buy__span-box--red">
+              <span class="buy__span-img-box buy__span-img-box--red">
+                
+                <picture>
+
+                  <source
+                  srcset="
+                    ./images/modal-buy-now/img3lg@1x.webp 1x,
+                    ./images/modal-buy-now/img3lg@2x.webp 2x
+                  "
+                />
+
+                  <source
+                  srcset="
+                    ./images/modal-buy-now/img3lg@1x.jpg 1x,
+                    ./images/modal-buy-now/img3lg@2x.jpg 2x
+                  "
+                />
+                <img class="buy__img" src="./images/modal-buy-now/img3lg@1x.jpg" alt="test">
+                </picture>
+
+              </span>
+              <p class="buy__img-span-text">milkshake</p>
+            </span>
+          </label>
+            </li>
+          </ul>
+        </form>
+
     <div class="form-group">
       <label class="form-field">
         <input class="form-input" type="text" name="Name" placeholder="Name" pattern="[A-Za-z]{3,32}" required>
