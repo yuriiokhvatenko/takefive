@@ -165,9 +165,25 @@
 
 .counter__list {
 
-  // first
-  &--first {
-    margin-bottom: 16px;
+  // mob
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  // tab
+  @media screen and (min-width: 768px) {
+    // first
+    &--first {
+      margin-bottom: 20px;
+    }
+  }
+
+  // desk
+   @media screen and (min-width: 1200px) {
+    // first
+    &--first {
+      margin-bottom: 16px;
+    }
   }
 }
 
@@ -177,15 +193,33 @@
 }
 
 .counter {
-  @include font (900, 46px, 56px, 0.04em);
   text-transform: uppercase;
   color: $blackTextColor;
   margin-bottom: 4px;
+
+  // media tab
+  @media screen and (min-width: 768px) {
+    @include font (900, 28px, 34px, 0.04em);
+  }
+
+  // media desk
+  @media screen and (min-width: 1200px) {
+    @include font (900, 46px, 56px, 0.04em);
+  }
 }
 
 .counter__name {
-  @include font (400, 14px, 17px, normal);
   color: $whiteTextColor;
+
+  // media tab
+  @media screen and (min-width: 768px) {
+    @include font (400, 8px, 10px, normal);
+  }
+
+  // media desk
+  @media screen and (min-width: 1200px) {
+    @include font (400, 14px, 17px, normal);
+  }
 }
 
 // .hero__figures {
