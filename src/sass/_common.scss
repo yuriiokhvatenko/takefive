@@ -3,25 +3,38 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background: url(../images/background/bg@1x.jpg);
+  background-size: cover;
+  background-position: center;
 
   @include screenType(retina) {
     background: url(../images/background/bg@2x.jpg);
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  
   }
 
   @include screenType(tablet) {
     background: url(../images/background/bg_md@1x.jpg);
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     @include screenType(retina) {
       background: url(../images/background/bg_md@2x.jpg);
       background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
     }
     @include screenType(desktop) {
       background: url(../images/background/bg_lg@1x.jpg);
       background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
       @include screenType(retina) {
         background: url(../images/background/bg_lg@2x.jpg);
         background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
       }
     }
   }
