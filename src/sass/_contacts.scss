@@ -82,6 +82,15 @@
   background-color: $whiteTextColor;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 
+  transition: 250ms ease;
+
+  // hover,focus
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+    box-shadow: 11px 14px 5px 0px rgba(0, 0, 0, 0.52);
+  }
+
   // mob
   @media screen and (max-width: 767px) {
     width: 280px;
@@ -372,6 +381,14 @@
 
   color: $blackTextColor;
   cursor: url(../images/cursor/pointer.png), pointer;
+
+  transition: 150ms ease-in-out;
+
+  // hover,focus
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
 
   // media mob
   @media screen and (max-width: 767px) {
