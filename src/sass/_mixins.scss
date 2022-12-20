@@ -1,0 +1,74 @@
+@mixin screenType($type) {
+    $mobile: 480px;
+    $tablet: 768px;
+    $desktop: 1200px;
+
+    @if $type =='fix-mobile' {
+        @media screen and (max-width: #{$tablet - 0.02}) {
+            @content;
+        }
+    }
+
+    @if $type =='mobile' {
+        @media screen and (min-width: $mobile) {
+            @content;
+        }
+    }
+
+    @if $type =='tablet' {
+        @media screen and (min-width: $tablet) {
+            @content;
+        }
+    }
+
+    @if $type =='not-desktop' {
+        @media screen and (max-width: #{$desktop - 0.02}) {
+            @content;
+        }
+    }
+
+    @if $type =='desktop' {
+        @media screen and (min-width: $desktop) {
+            @content;
+        }
+    }
+
+    @if $type =='retina' {
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            @content;
+        }
+    }
+}   
+
+
+// приклад використання 
+// замість @media screen and (min-device-pixel-ratio: 2),
+// (min-resolution: 192dpi),
+// (min-resolution: 2dppx)
+// пишемо
+// @include screenType(retina) {
+//     background-image: linear-gradient(to right,
+//             rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//         url(../images/hero/bg-hero_sm@2x.jpg);
+// }
+
+@mixin font ($fw: false, $fs, $lh, $ls: normal) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: calc($lh / $fs);
+    letter-spacing: $ls; 
+}
+
+// приклад використання
+// замість 
+// font-weight: 500;
+// font-size: 14px;
+// line-height: 183%;
+/* or 26px */
+// letter-spacing: 0.04em;
+
+// пишемо 
+// @include font(500, 14px, 26px, 0.04em);

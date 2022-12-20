@@ -1,0 +1,172 @@
+.container__franchise {
+    background-color: #FCFCFC;
+    border: 2px solid #F8D24E;
+    border-radius: 10px;
+    @media screen and (max-width:767.98px) {
+        width: 280px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 568px;
+    }
+}
+
+
+.close__btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    padding: 0;
+    cursor: pointer;
+    border: transparent;
+    background-color: transparent;
+    //background-color: #131313;
+}
+
+.close__btn-x {
+    @media screen and (min-width: 768px) {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.modal__title {
+    font-family: 'Seymour One';
+    font-weight: 400;
+    color: var(--accent-color);
+    text-align: center;
+    
+    display: block;
+    margin-bottom: 20px;
+
+    @media screen and (max-width:767.98px) {
+        margin-bottom: 20px;
+        width: 221px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    @media screen and (min-width: 768px) {
+        margin: auto;
+        width: 322px;
+        margin-bottom: 24px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+.modal__text {
+    font-family: var(--main-font);
+    font-weight: 400;
+    
+    color: var(--accent-color);
+
+    @media screen and (max-width:767.98px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @media screen and (min-width: 768px) {
+        display: inline-block;
+        width: 448px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+.form {
+    @media screen and (max-width:767.98px) {
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    
+}
+
+.form--label--franchise {
+
+    cursor: url(../images/cursor/default.png), auto;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+} 
+
+.form__input,
+.form__comment {
+    box-sizing: border-box;
+    padding: 8px 12px 7px;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84A178;
+    border-radius: 10px;
+    cursor: url(../images/cursor/default.png), auto;
+
+    @media screen and (max-width:767.98px) {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 368px;  
+        margin-bottom: 16px; 
+    }
+}
+
+.form__comment {
+    resize: none;
+    margin-bottom: 0;
+}
+
+::placeholder {
+    font-family: var(--main-font);
+    font-weight: 400;
+    color: var(--accent-color);
+
+    @media screen and (max-width:767.98px) {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.btn__modal {
+    font-family: var(--main-font);
+    font-weight: 600;
+    color: var(--accent-color);
+    cursor: url(../images/cursor/pointer.png), pointer;
+
+    background: #F8D24E;
+    border-radius: 10px;
+    border: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 12px 34px;
+
+    &:hover {
+        background: #0A8817;
+    }
+
+    &:focus {
+        background: #0A8817;
+        color: #ffffff;
+        outline: transparent;
+    }
+
+    @media screen and (max-width:767.98px) {
+        width: 114px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 121px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

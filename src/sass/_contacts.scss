@@ -1,0 +1,504 @@
+// section contacts
+
+.contacts {
+  font-family: 'Montserrat', sans-serif;
+
+  // media mob
+  @media screen and (max-width: 767px) {
+    padding-bottom: 60px;
+
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 0%,
+     rgba(0, 0, 0, 0) 353px, 
+      $bgColor 353px, 
+      $bgColor 100%);
+  }
+
+  // media tab
+  @media screen and (min-width: 768px) {
+    padding-bottom: 40px;
+
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 0%, 
+      rgba(0, 0, 0, 0) 299px, 
+      $bgColor 299px, 
+      $bgColor 100%);
+  }
+
+  //  media desk
+  @media screen and (min-width: 1200px) {
+
+    padding-bottom: 120px;
+
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 132px,
+      $bgColor 132px, 
+      $bgColor 100%);
+  }
+}
+
+// :::::::::::::::
+// contacts list
+// :::::::::::::::
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  // -setting media mob
+  &-setting {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+
+    // -setting media tab
+    @media screen and (min-width: 768px) {
+      margin-bottom: 40px;
+    }
+
+    // -setting media desk
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 60px;
+    }
+  }
+
+  // :::::::::::::
+  // media tab
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  // media desk
+  @media screen and (min-width: 1200px) {
+    gap: 32px;
+  }
+}
+
+.contacts__list-item {
+  background-color: $whiteTextColor;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+
+  // mob
+  @media screen and (max-width: 767px) {
+    width: 280px;
+    padding: 40px 32px 24px;
+
+    border-radius: 24px;
+  }
+
+  // tab
+  @media screen and (min-width: 768px) {
+    width: 224px;
+    padding: 40px 24px;
+
+    border-radius: 24px;
+  }
+
+  // desk
+  @media screen and (min-width: 1200px) {
+    width: 368px;
+    padding: 40px 40px;
+  }
+}
+
+// :::::::::::::::
+// contacts card
+// :::::::::::::::
+
+.contacts__category {
+  display: inline-block;
+
+  text-transform: uppercase;
+
+  background-color: $accentColor;
+  border-radius: 4px;
+
+  // media mob
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+    padding: 4px 22px;
+
+    @include font (500, 12px, 14px, 0.04em);
+  }
+
+  // tab
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+    padding: 4px 13px;
+
+    @include font (500, 16px, 22px, 0.04em);
+
+    border-radius: 6px;
+
+    // contacts category media tab padding card two
+    &--padding-tab {
+      padding: 4px 10px;
+    }
+  }
+
+  // desk
+  @media screen and (min-width: 1200px) {
+    padding: 4px 14px;
+  }
+}
+
+// :::::::::::::::::::::::::
+// location
+// :::::::::::::::::::::::::
+
+.contacts__location-list {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  // after
+  &::after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #E1E1E1;
+
+    // media after mob translateY
+    @media screen and (max-width: 767px) {
+      transform: translateY(24px);
+    }
+
+    // media after tab/desk translateY
+    @media screen and (min-width: 768px) {
+      transform: translateY(32px);
+    }
+  }
+
+  // media mob
+  @media screen and (max-width: 767px) {
+    margin-bottom: 48px;
+    gap: 8px;
+  }
+
+  // media tab
+  @media screen and (min-width: 768px) {
+    margin-bottom: 64px;
+    gap: 12px;
+  }
+
+  // media desk
+  @media screen and (min-width: 1200px) {
+    gap: 8px;
+  }
+}
+
+.contacts__location-text {
+  display: inline-block;
+
+  color: $blackTextColor;
+
+  // media mob
+  @media screen and (max-width: 767px) {
+    @include font (500, 12px, 22px, 0.04em);
+  }
+
+  // tab
+  @media screen and (min-width: 768px) {
+    @include font (500, 14px, 26px, 0.04em);
+  }
+
+  // desk
+  @media screen and (min-width: 1200px) {
+    @include font (500, 16px, 30px, 0.04em);
+  }
+}
+
+.contacts__location-link {
+  display: block;
+
+  @include font (500, 12px, 22px, 0.04em);
+  color: $addressTextColor;
+  cursor: url(../images/cursor/pointer.png), pointer;
+
+  // hover/focus
+  &:hover,
+  &:focus {
+
+    text-decoration: underline;
+  }
+
+  // media mob
+  @media screen and (max-width: 767px) {
+    // first and last link 
+    &--width {
+      width: 190px;
+    }  
+  }
+
+  // tab
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    height: 71px;
+
+    @include font (500, 14px, 26px, 0.04em);
+
+    // second width link
+    &--second-width {
+      width: 158px;
+    }
+  }
+
+  // desk
+  @media screen and (min-width: 1200px) {
+    @include font (500, 16px, 29px, 0.04em);
+  }
+}
+
+// ::::::::::::
+// week
+// ::::::::::::
+
+.contacts__week {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-bottom: 48px;
+
+  // after
+  &::after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #E1E1E1;
+
+    // after media mob
+    @media screen and (max-width: 767px) {
+      transform: translateY(24px);
+    }
+
+    // after media tab
+    @media screen and (min-width: 768px) {
+
+      transform: translateY(32px);
+    }
+  }
+
+  // media tab
+  @media screen and (min-width: 768px) {
+    margin-bottom: 64px;
+  }
+
+  // desk
+  @media screen and (min-width: 1200px) {
+    gap: 12px;
+  }
+}
+
+.contacts__week-day {
+  color: $blackTextColor;
+
+  // media mob
+  @media screen and (max-width: 767px) {
+    @include font (500, 12px, 22px, normal);
+  }
+
+  // media tab
+  @media screen and (min-width: 768px) {
+    @include font (500, 14px, 26px, normal);
+  }
+
+  // media desk
+  @media screen and (min-width: 1200px) {
+    @include font (500, 16px, 30px, 0.04em);
+  }
+}
+
+.contacts__week-time {
+  color: $secondaryTextColor;
+
+  // media mob
+  @media screen and (max-width: 767px) {
+    @include font (500, 12px, 22px, normal);
+  }
+
+  // media tab
+  @media screen and (min-width: 768px) {
+    @include font (500, 14px, 26px, normal);
+  }
+
+  // media desk
+  @media screen and (min-width: 1200px) {
+    @include font (500, 16px, 30px, normal);
+  }
+}
+
+// :::::::::::::::::
+// communicate
+// :::::::::::::::::
+
+.contacts__communication {
+  display: flex;
+  flex-direction: column;
+
+  // mob
+  @media screen and (max-width: 767px) {
+    gap: 6px;
+  }
+
+  // tab/desk
+  @media screen and (min-width: 768px) {
+    gap: 4px;
+  }
+}
+
+.contacts__communication-link {
+  display: block;
+
+  color: $blackTextColor;
+  cursor: url(../images/cursor/pointer.png), pointer;
+
+  // media mob
+  @media screen and (max-width: 767px) {
+    @include font (500, 12px, 19px, normal);
+  }
+
+  // media tab
+  @media screen and (min-width: 768px) {
+    @include font (500, 14px, 21px, normal);
+  }
+
+  // media desk
+  @media screen and (min-width: 1200px) {
+    @include font (500, 16px, 24px, normal);
+  }
+}
+
+// :::::::::::::::
+// contacts btn
+// :::::::::::::::
+
+.contacts__list-btn {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+
+  // media mob
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contacts__btn {
+  font-family: 'Montserrat', sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  min-width: 196px;
+  padding: 12px 40px;
+
+  @include font (600, 14px, 18px, normal);
+
+  border: transparent;
+  border-radius: 10px;
+
+  cursor: url(../images/cursor/pointer.png), pointer;
+
+  // ::::::::::::::
+  // btn location
+  // ::::::::::::::
+
+  &--location {
+
+    color: $blackTextColor;
+
+    background-color: $accentColor;
+
+    transition: 250ms ease;
+
+    // hover
+    &:hover {
+      background-color: $btnHoverColor;
+    }
+
+    // focus
+    &:focus {
+      background-color: $btnHoverColor;
+      fill: #FFFFFF;
+      color: #FFFFFF;
+
+      outline: transparent;
+    }
+
+    // disabled
+    &:disabled {
+      background-color: $secondaryTextColor;
+    }
+  }
+
+  // ::::::::::::::::
+  // btn franchise
+  // ::::::::::::::::
+
+  &--franchise {
+
+    color: #000000;
+
+    background-color: transparent;
+    border: 1px solid $accentColor;
+
+    transition: 300ms ease;
+
+    // hover
+    &:hover {
+      border-color: $btnHoverColor;
+    }
+
+    // focus
+    &:focus {
+      fill: #FFFFFF;
+      color: #FFFFFF;
+      border-color: $btnHoverColor;
+
+      outline: transparent;
+    }
+
+    // disabled
+    &:disabled {
+      border-color: $secondaryTextColor;
+    }
+  }
+}
+
+/* visually-hidden */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

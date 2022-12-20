@@ -1,0 +1,65 @@
+.hero__icecream {
+  animation: slide-to-bottom 1000ms ease-out 200ms 1 both;
+
+  @keyframes slide-to-bottom {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    50% {
+      opacity: 0.6;
+      scale: 1.5;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      scale: 1;
+    }
+  }
+}
+
+.hero__plate {
+  // animation: name duration timing-function delay iteration-count direction
+  //   fill-mode;
+  animation: slide-to-right 1000ms ease-out 600ms 1 both;
+
+  @keyframes slide-to-right {
+    0% {
+      opacity: 0;
+      transform: translateX(-150px);
+    }
+    50% {
+      opacity: 0.5;
+      scale: 1.8;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      scale: 1;
+    }
+  }
+}
+
+.hero__title,
+.hero__text-span {
+  animation: slide-to-top 1000ms ease-out 900ms 1 both;
+
+  @keyframes slide-to-top {
+    0% {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+    50% {
+      opacity: 0.7;
+      transform: translateY(0);
+      letter-spacing: 1.5em;
+      //   line-height: 68px;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      letter-spacing: 0.04em;
+      //   line-height: 48px;
+    }
+  }
+}

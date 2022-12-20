@@ -1,0 +1,160 @@
+.ftr {
+  background-color: $bgColor;
+}
+
+.block {
+  @include screenType(tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.ftr__div {
+  min-width: 280px;
+  padding-bottom: 40px;
+
+  @include screenType(tablet) {
+    padding-bottom: 32px;
+  }
+
+  @include screenType(desktop) {
+    padding-bottom: 60px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+
+// SLOGAN_______________-----------------------------------
+.ftr__slogancover {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.ftr__slogan {
+  @include font(700, 18px, 22px, normal);
+  text-transform: uppercase;
+  color: $whiteTextColor;
+  max-width: 232px;
+  margin-bottom: 14px;
+  @include screenType(tablet) {
+    @include font(700, 26px, 32px, 0.04em);
+    max-width: 352px;
+    margin-bottom: 8px;
+    @include screenType(desktop) {
+      @include font(400, 30px, 37px, 0.04em);
+      max-width: 504px;
+    }
+  }
+}
+
+.ftr__accentslogan {
+  @include font(700, 34px, 41px, 0.04em);
+  text-transform: uppercase;
+  color: $whiteTextColor;
+  max-width: 200px;
+  @include screenType(tablet) {
+    @include font(700, 48, 59, 0.06em);
+    min-width: 352px;
+    @include screenType(desktop) {
+      @include font(700, 58px, 71px, 0.06em);
+      max-width: 504px;
+    }
+  }
+}
+
+.ftr__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.ftr__list {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  @include screenType(tablet) {
+    margin-bottom: 34px;
+    gap: 30px;
+  }
+  @include screenType(desktop) {
+    margin-bottom: 40px;
+  }
+}
+// .ftr__link {
+//     fill: currentColor;
+//     &:hover, &:focus {
+//         fill: #fff
+//     }
+// }
+
+.ftr__link {
+  cursor: url(../images/cursor/pointer.png), pointer;
+}
+
+.ftr__icon {
+    fill: #84a178;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+        fill: #fcfcfc;
+    }
+}
+
+.ftr__address {
+    font-style: normal
+}
+
+.ftr__text {
+  @include font(700, 12px, 22px, normal);
+  color: $blackTextColor;
+  @include screenType(tablet) {
+    @include font(700, 14px, 26px, normal);
+  }
+}
+
+.ftr__call {
+  display: block;
+  @include font(700, 12px, 22px, normal);
+  color: $whiteTextColor;
+  text-align: right;
+  cursor: url(../images/cursor/pointer.png), pointer;
+  @include screenType(tablet) {
+    @include font(700, 14px, 26px, normal);
+  }
+}
+
+.ftr__copyright {
+  background-color: $bgColor;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include screenType(tablet) {
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  @media screen and(max-width: 1199px) {
+    border-top: 1px solid #e1e1e1;
+  }
+}
+
+.ftr__copyright-text {
+  @include font(700, 14px, 21px, normal);
+  text-align: center;
+  color: #7a7a7a;
+  @include screenType(tablet) {
+    @include font(700, 14px, 26px, 0.02em);
+  }
+}
+
+.ftr__copyright-text + .ftr__copyright-text {
+  @include font(700, 14px, 21px, normal);
+  text-align: center;
+
+  @include screenType(tablet) {
+    @include font(700, 14px, 26px, 0.02em);
+  }
+}
