@@ -95,6 +95,7 @@
 
     transition: 300ms ease-in-out;
 
+    // focus
     &:focus-within .form__franchise-icon {
         opacity: 1;
 
@@ -104,23 +105,21 @@
 
     &:focus-within:not([data-message],[data-payment]) {
     box-shadow: 0 0 0 4px rgba(255, 106, 0, 0.41);
-  }
+    }
 
+    // if valid
     &:has(.form__input:not(:placeholder-shown):valid) {
     box-shadow: 0 0 0 4px rgba(3, 168, 6, 0.498);
-  }
+    }
 
-
+    // if invalid
     &:has(.form__input:not(:placeholder-shown):invalid) {
-  box-shadow: 0 0 0 4px rgba(227, 43, 26, 0.485);
-  }
+    box-shadow: 0 0 0 4px rgba(227, 43, 26, 0.485);
+    }
 
-    // @media screen and (min-width: 768px) {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;   
-    // }
-  @media screen and (max-width: 767px) {
+
+    // media mob
+    @media screen and (max-width: 767px) {
         display: block;
         padding: 0;
         margin-bottom: 12px;
@@ -159,17 +158,20 @@
     border-radius: 5px;
     background-color: $whiteTextColor;
 
+    // media mob
     @media screen and (max-width:767px) {
-            transform: translateY(-100%) scale(0.8);
+        transform: translateY(-100%) scale(0.8);
     }
   }
 
+    // input placeholed
   &::placeholder {
     font-family: inherit;
 
     opacity: 0;
   }
 
+    // focus placeholed
   &:focus::placeholder {
     opacity: 1;
   }
@@ -179,12 +181,14 @@
     position: absolute;
     transition: 300ms ease-in;
 
+    // media mob
     @media screen and (max-width: 767px) {
         top: 8px;
         left: 12px;
         transform-origin: top left;
     }
 
+    // media tab/desk
     @media screen and (min-width: 768px) {
          top: 50%;
         left: 12px;
@@ -201,6 +205,7 @@
     opacity: 0;
     transition: 300ms ease-in-out;
 
+    // if invalid
     .form__input:not(:placeholder-shown):invalid:required ~ & {
     opacity: 1;
     fill: rgba(227, 43, 26, 0.783);
@@ -214,6 +219,7 @@
     filter: drop-shadow(1px 2px 9px rgb(0, 248, 41));
   }
 
+   //  if valid
   .form__input:not(:placeholder-shown):valid:required ~ & {
     opacity: 1;
     fill: rgba(3, 168, 6, 0.887);
@@ -225,6 +231,7 @@
     transition-delay: 150ms;
   }
 
+    // media mob
   @media screen and (max-width: 767px) {
       top: 50%;
       right: 7%;
@@ -241,14 +248,16 @@
     resize: none;
     margin-bottom: 0;
     
-
+    // comment placeholder
     &::placeholder {
         opacity: 0;
     }
 
+    // focus comment placeholder
     &:focus::placeholder {
         opacity: 1;
     }
+
 
     &:focus + .form__franchise-span--comment,
     &:not(:placeholder-shown) + .form__franchise-span--comment {
@@ -273,8 +282,9 @@
 
     transition: 300ms ease-in-out;
 
-            cursor: url(../images/cursor/default.png), auto;
+    cursor: url(../images/cursor/default.png), auto; 
 }
+
 
 ::placeholder {
     font-family: var(--main-font);
