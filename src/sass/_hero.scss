@@ -163,47 +163,106 @@
   }
 }
 
-.hero__figures {
-  display: none;
+.counter__list {
 
+  // mob
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  // tab
   @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 2px;
+    // first
+    &--first {
+      margin-bottom: 20px;
+    }
   }
 
-  @media screen and (min-width: 1200px) {
-    margin-top: 34px;
-  }
-}
-
-.hero__figure-text {
-  font-size: 8px;
-  line-height: calc(10 / 8);
-  text-align: right;
-  color: $whiteTextColor;
-
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: calc(17 / 14);
+  // desk
+   @media screen and (min-width: 1200px) {
+    // first
+    &--first {
+      margin-bottom: 16px;
+    }
   }
 }
 
-.hero__figure-span {
-  font-weight: 900;
-  font-size: 28px;
-  line-height: 34px;
-  text-align: right;
-  letter-spacing: 0.04em;
+.counter__item {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.counter {
   text-transform: uppercase;
   color: $blackTextColor;
+  margin-bottom: 4px;
 
+  // media tab
+  @media screen and (min-width: 768px) {
+    @include font (900, 28px, 34px, 0.04em);
+  }
+
+  // media desk
   @media screen and (min-width: 1200px) {
-    font-size: 46px;
-    line-height: calc(56 / 46);
+    @include font (900, 46px, 56px, 0.04em);
   }
 }
+
+.counter__name {
+  color: $whiteTextColor;
+
+  // media tab
+  @media screen and (min-width: 768px) {
+    @include font (400, 8px, 10px, normal);
+  }
+
+  // media desk
+  @media screen and (min-width: 1200px) {
+    @include font (400, 14px, 17px, normal);
+  }
+}
+
+// .hero__figures {
+//   display: none;
+
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     margin-top: 2px;
+//   }
+
+//   @media screen and (min-width: 1200px) {
+//     margin-top: 34px;
+//   }
+// }
+
+// .hero__figure-text {
+//   font-size: 8px;
+//   line-height: calc(10 / 8);
+//   text-align: right;
+//   color: $whiteTextColor;
+
+//   @media screen and (min-width: 1200px) {
+//     font-size: 14px;
+//     line-height: calc(17 / 14);
+//   }
+// }
+
+// .hero__figure-span {
+//   font-weight: 900;
+//   font-size: 28px;
+//   line-height: 34px;
+//   text-align: right;
+//   letter-spacing: 0.04em;
+//   text-transform: uppercase;
+//   color: $blackTextColor;
+
+//   @media screen and (min-width: 1200px) {
+//     font-size: 46px;
+//     line-height: calc(56 / 46);
+//   }
+// }
 
 // -----------------------
 //      HERO BUTTONS
