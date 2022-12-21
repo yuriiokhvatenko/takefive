@@ -18,6 +18,12 @@
           "img[loading]"
         ]
       }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
     ]
   }
 }

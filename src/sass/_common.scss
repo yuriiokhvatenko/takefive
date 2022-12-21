@@ -77,9 +77,16 @@ body {
   /*  Установаем ширину окна  */
   width: 280px;
   height: auto;
+  margin-top: 270px;
 
-  @include screenType(tablet) {
+  @media screen and(min-width: 768px) and (max-width: 1199.98px) {
     width: 568px;
+    margin-top: 100px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    width: 568px;
+    margin-top: 25px;
   }
 
   /*  Центрируем и задаем z-index */
@@ -88,6 +95,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
+
   /* Должен быть выше чем у подложки*/
 
   /*  Побочные стили   */

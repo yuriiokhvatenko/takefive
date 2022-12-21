@@ -7,7 +7,30 @@
   <div class="mobile__wrapper">
     <nav class="mobile__nav">
       <a href="./index.html" class="mobile__logo-link">
-        <img src="./images/hero/logo_s@1x.png" alt="Ice Cream Logo" />
+        <picture>
+          <source srcset="
+                                  ./images/hero/header_logo_40.webp 40w,
+                                  ./images/hero/header_logo_48.webp 48w,
+                                  ./images/hero/header_logo_60.webp 60w,
+                                  ./images/hero/header_logo_80.webp 80w,
+                                  ./images/hero/header_logo_96.webp 96w,
+                                  ./images/hero/header_logo_120.webp 120w
+                                " type="image/webp" sizes="(min-width: 1200px) 60px, 
+                                       (min-width: 768px) 48px, 
+                                       (min-width: 480px) 40px,
+                            100vw" />
+          <img class="profile__img" srcset="
+                                  ./images/hero/header_logo_40.png 40w,
+                                  ./images/hero/header_logo_48.png 48w,
+                                  ./images/hero/header_logo_60.png 60w,
+                                  ./images/hero/header_logo_80.png 80w,
+                                  ./images/hero/header_logo_96.png 96w,
+                                  ./images/hero/header_logo_120.png 120w
+                                " sizes="(min-width: 1200px) 60px, 
+                                       (min-width: 768px) 48px, 
+                                       (min-width: 480px) 40px,
+                            100vw" src="./images/hero/header_logo_40.png" alt="LOGO" loading="lazy" />
+        </picture>
       </a>
       <ul class="mobile-menu">
         <li class="mobile-menu__item">
