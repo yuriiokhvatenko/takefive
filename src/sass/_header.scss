@@ -41,10 +41,12 @@
   display: flex;
   align-items: center;
 
+
   @media screen and (min-width: 768px) {
     justify-content: space-between;
     height: 46px;
   }
+
 
   @media screen and (min-width: 1200px) {
     justify-content: space-between;
@@ -67,12 +69,16 @@
   display: flex;
   align-items: center;
   color: $whiteTextColor;
-  padding: 15px 0;
+  // padding: 15px 0;
+  padding-top: 22px;
+  padding-bottom: 13px;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(20 / 16);
   cursor: url(../images/cursor/pointer.png), pointer;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
@@ -110,6 +116,7 @@
   border: none;
   cursor: pointer;
   z-index: 10;
+  
 
   @media screen and (min-width: 1200px) {
     display: none;
@@ -117,6 +124,46 @@
 }
 
 .header__buy-now-btn {
+
+  display: none;
+  @include screenType (tablet) {
+    margin-left: 36px;
+    cursor: url(../images/cursor/pointer.png), pointer;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+  
+    padding: 12px 34px;
+    height: 42px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+    @include font (600, 14px, 18px, normal);
+    color: #000;
+    background-color: $accentColor;
+
+    z-index: 10;
+    &:hover {
+      background-color: $btnHoverColor;
+    }
+    &:focus {
+      background-color: $btnHoverColor;
+      color: #fff;
+      fill: #fff;
+    }
+    &__button:disabled {
+        background-color: $secondaryTextColor;
+    }
+  }
+  @include screenType (desktop) {
+    margin-left: 0;
+  }
+
+
   margin-left: 32px;
   height: 42px;
   display: block;
@@ -150,9 +197,15 @@
     fill: currentColor;
   }
 
-  display: none;
-  z-index: 10;
 
+  
+}
+
+
+
+// cursor: url(../images/cursor/pointer.png),
+// pointer;
+=======
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
@@ -160,3 +213,4 @@
     z-index: 5;
   }
 }
+
