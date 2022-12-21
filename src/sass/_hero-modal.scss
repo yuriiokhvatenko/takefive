@@ -246,7 +246,7 @@
     padding-bottom: 11px;
   }
 }
-input:focus:invalid {
+.form-input:focus:invalid {
   border: 1px solid red;
 }
 .form-message {
