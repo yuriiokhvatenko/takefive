@@ -7,11 +7,11 @@
   font-size: 14px;
 
   @media screen and (min-width: 768px) {
-    padding-top: 24px;
+    padding-top: 20px;
   }
 
   @media screen and (min-width: 1200px) {
-    padding-top: 28px;
+    padding-top: 8px;
   }
 }
 
@@ -39,9 +39,16 @@
 
 .header__nav {
   display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    height: 46px;
+  }
 
   @media screen and (min-width: 1200px) {
     justify-content: space-between;
+    height: 65px;
   }
 }
 
@@ -52,7 +59,7 @@
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
-    gap: 27px;
+    gap: 28px;
   }
 }
 
@@ -74,15 +81,22 @@
   }
 }
 
-.header__logo-link {
+.header__logo-img {
   width: 40px;
   height: 37px;
+  position: relative;
 
   cursor: url(../images/cursor/pointer.png), pointer;
+
+  @media screen and (min-width: 768px) {
+    width: 48px;
+    height: 44px;
+  }
 
   @media screen and (min-width: 1200px) {
     width: 60px;
     height: 65px;
+    position: relative;
   }
 }
 
@@ -103,8 +117,12 @@
 }
 
 .header__buy-now-btn {
+  margin-left: 32px;
+  height: 42px;
+  display: block;
   font-family: 'Montserrat', sans-serif;
-  padding: 12px 34px;
+  padding: 12px 51px 12px 36px;
+
   background: $accentColor;
   border: none;
   border-radius: 10px;
@@ -113,18 +131,23 @@
   text-align: center;
   cursor: url(../images/cursor/pointer.png), pointer;
   color: $blackTextColor;
+  fill: currentColor;
+  @include font(600, 14px, 20px);
 
   &:hover {
     background: $btnHoverColor;
+    fill: currentColor;
   }
 
   &:focus {
     background: $btnHoverColor;
     color: $whiteTextColor;
+    fill: currentColor;
   }
 
   &:disabled {
     background: $secondaryTextColor;
+    fill: currentColor;
   }
 
   display: none;
@@ -135,6 +158,5 @@
     align-items: center;
     gap: 8px;
     z-index: 5;
-    margin: auto 0 auto 32px;
   }
 }
