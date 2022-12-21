@@ -7,6 +7,7 @@
       <!-- HEADER LOGO -->
       <!-- ----------------------------------------------------------->
 
+
       <a href="./index.html" class="header__logo-link">
         <picture>
           <source media="(min-width: 1200px)" type="image/png"
@@ -17,6 +18,31 @@
             srcset="./images/logo/logo-sm@1x.png 1x, ./images/logo/logo-sm@2x.png 2x" />
           <img src="./images/logo/logo-sm@1x.png" alt="Ice Cream Logo" />
         </picture>
+
+      <picture class="header__logo-img">
+        <source srcset="
+                          ./images/hero/header_logo_40.webp 40w,
+                          ./images/hero/header_logo_48.webp 48w,
+                          ./images/hero/header_logo_60.webp 60w,
+                          ./images/hero/header_logo_80.webp 80w,
+                          ./images/hero/header_logo_96.webp 96w,
+                          ./images/hero/header_logo_120.webp 120w
+                        " type="image/webp" sizes="(min-width: 1200px) 60px, 
+                               (min-width: 768px) 48px, 
+                               (min-width: 480px) 40px,
+                    100vw" />
+        <img class="profile__img" srcset="
+                          ./images/hero/header_logo_40.png 40w,
+                          ./images/hero/header_logo_48.png 48w,
+                          ./images/hero/header_logo_60.png 60w,
+                          ./images/hero/header_logo_80.png 80w,
+                          ./images/hero/header_logo_96.png 96w,
+                          ./images/hero/header_logo_120.png 120w
+                        " sizes="(min-width: 1200px) 60px, 
+                               (min-width: 768px) 48px, 
+                               (min-width: 480px) 40px,
+                    100vw" src="./images/hero/header_logo_40.png" alt="LOGO" loading="lazy" />
+      </picture>
       </a>
 
       <!-- ----------------------------------------------------------->
@@ -40,22 +66,14 @@
       <!-- ----------------------------------------------------------->
       <!-- BURGER-MENU-->
       <!-- ----------------------------------------------------------->
-      <button
-        class="menu-toggle js-open-menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
+      <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="menu__toggle--open" width="40" height="40">
           <use href="./images/hero/hero_icons.svg#icon-burger_menu-open"></use>
         </svg>
       </button>
 
       <!-- «BUY NOW» button -->
-      <button
-        class="header__buy-now-btn js-open-modal"
-        type="button"
-        data-modal="1"
-      >
+      <button class="header__buy-now-btn js-open-modal" type="button" data-modal="1">
         Buy now
         <svg width="12" height="12">
           <use href="./images/hero/hero_icons.svg#arrow_right"></use>
