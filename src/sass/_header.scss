@@ -69,7 +69,9 @@
   display: flex;
   align-items: center;
   color: $whiteTextColor;
+
   // padding: 15px 0;
+
   padding-top: 22px;
   padding-bottom: 13px;
   font-style: normal;
@@ -168,7 +170,7 @@
   height: 42px;
   display: block;
   font-family: 'Montserrat', sans-serif;
-  padding: 12px 51px 12px 36px;
+  padding: 12px 36px 12px 36px;
 
   background: $accentColor;
   border: none;
@@ -180,6 +182,8 @@
   color: $blackTextColor;
   fill: currentColor;
   @include font(600, 14px, 20px);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     background: $btnHoverColor;
@@ -205,7 +209,7 @@
 
 // cursor: url(../images/cursor/pointer.png),
 // pointer;
-=======
+
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
