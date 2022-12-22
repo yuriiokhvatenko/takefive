@@ -2,20 +2,17 @@
 <!-- <a href="#" class="js-open-modal" data-modal="1">Використано- кнопка "Buy now"Открыть окно 1</a> -->
 <!-- <a href="#" class="js-open-modal" data-modal="2">Використано</a> -->
 <!-- <a href="#" class="js-open-modal" data-modal="3">ВИКОРИСТАН!!!Открыть окно 3</a> -->
-<!-- <a href="#" class="js-open-modal" data-modal="4">Открыть окно 4</a> -->
+<!-- <a href="#" class="js-open-modal" data-modal="4">використано модалка продактс2 4</a> -->
 <!-- <a href="#" class="js-open-modal" data-modal="5">Використано 5</a> -->
 <!-- <a href="#" class="js-open-modal" data-modal="6">Використано- кнопка "Franchise" Открыть окно 6</a> -->
+<!--  <a href="#" class="js-open-modal" data-modal="6">Використано модалка продактс3 -->
 
 <!-- Несколько модальных окон -->
 
 <div class="modal modal__hero" data-modal="1">
   <button class="modal__hero--button js-modal-close" type="button">
-    <svg class="close-btn-icon" width="20" height="20">
-      <use
-        href="./images/sprite.svg#icon-clarity_close-line"
-        width="20"
-        height="20"
-      ></use>
+    <svg class="close-btn-icon" width="24" height="24">
+      <use href="./images/sprite.svg#icon-modal-icon-close"></use>
     </svg>
   </button>
   <p class="modal__hero--title">Buy now</p>
@@ -211,6 +208,8 @@
   </form>
 </div>
 
+
+
 <!-- data MODAL 2 -->
 <div class="modal products__modal" data-modal="2">
   <svg
@@ -285,36 +284,248 @@
   </ul>
 
   <div class="modal-form">
-    <label class="form-item">
-      <input
-        class="form-input products-input"
-        type="text"
-        name="inputBox"
-        placeholder="Name"
-      />
-    </label>
-    <label class="form-item">
-      <input
-        class="form-input products-input"
-        type="text"
-        name="inputBox"
-        placeholder="Phone"
-      />
-    </label>
-    <label class="form-item form-item-comment">
-      <input
-        class="form-input fi-comment"
-        type="text"
-        name="inputBox"
-        placeholder="Comment"
-      />
-    </label>
-    <button class="btn-sumbit-modal" type="submit">Submit</button>
+    <form class="form-ice">
+      <label class="form-item">
+        <input
+          class="form-input products-input"
+          type="text"
+          name="inputBox"
+          placeholder="Name"
+        />
+      </label>
+      <label class="form-item">
+        <input
+          class="form-input products-input"
+          type="text"
+          name="inputBox"
+          placeholder="Phone"
+        />
+      </label>
+      <label class="form-item form-item-comment">
+        <input
+          class="form-input fi-comment"
+          type="text"
+          name="inputBox"
+          placeholder="Comment"
+        />
+      </label>
+      <button class="btn-sumbit-modal" type="submit">Submit</button>
+    </form>
+    
+  </div>
+</div>
+
+<div class="modal products__modal" data-modal="4">
+  <svg
+    class="modal__cross js-modal-close"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+    />
+  </svg>
+
+  <h3 class="modal__title">Ice coffee</h3>
+
+  <span class="thumb-modal--coffee">
+    <img
+      class="product__img-modal"
+      src="./images/modal-products/products-ice-cream.png"
+      alt=""
+      width="152"
+      height="139"
+    />
+  </span>
+
+  <ul class="nutritior__list">
+    <li class="nutrition__items">
+      <span class="items-number--coffee">205</span>
+      <span class="items-text--coffee postion-text">kcal</span>
+    </li>
+    <li class="nutrition__items">
+      <span class="items-number--coffee">5g</span>
+      <span class="items-text--coffee">Prote...</span>
+    </li>
+    <li class="nutrition__items">
+      <span class="items-number--coffee">6,8g</span>
+      <span class="items-text--coffee">Fats</span>
+    </li>
+    <li class="nutrition__items">
+      <span class="items-number--coffee">35,7g</span>
+      <span class="items-text--coffee">Carbs</span>
+    </li>
+  </ul>
+
+  <h4 class="modal__text-ingredients">Ingredients</h4>
+
+  <ul class="ingredients__list">
+    <li class="ingredients__items">
+      <span class="ingredients-text">Milk</span>
+      <span class="ingredients-numbers">70ml</span>
+    </li>
+
+    <li class="ingredients__items">
+      <span class="ingredients-text">Ice cubes</span>
+      <span class="ingredients-numbers">3 units</span>
+    </li>
+    <li class="ingredients__items">
+      <span class="ingredients-text">Coffee</span>
+      <span class="ingredients-numbers">5g</span>
+    </li>
+    <li class="ingredients__items">
+      <span class="ingredients-text">Sugar</span>
+      <span class="ingredients-numbers">10g</span>
+    </li>
+    <li class="ingredients__items">
+      <span class="ingredients-text">Ice cream vanilla</span>
+      <span class="ingredients-numbers">100g</span>
+    </li>
+  </ul>
+
+  <div class="modal-form">
+    <form class="form-coffee">
+      <label class="form-item">
+        <input
+          class="form-input products-input"
+          type="text"
+          name="inputBox"
+          placeholder="Name"
+        />
+      </label>
+      <label class="form-item">
+        <input
+          class="form-input products-input"
+          type="text"
+          name="inputBox"
+          placeholder="Phone"
+        />
+      </label>
+      <label class="form-item form-item-comment">
+        <input
+          class="form-input fi-comment"
+          type="text"
+          name="inputBox"
+          placeholder="Comment"
+        />
+      </label>
+      <button class="btn-sumbit-modal" type="submit">Submit</button>
+    </form>
+    
+  </div>
+</div>
+
+<div class="modal products__modal" data-modal="7">
+  <svg
+    class="modal__cross js-modal-close"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+    />
+  </svg>
+
+  <h3 class="modal__title">Milkshake</h3>
+
+  <span class="thumb-modal--shake">
+    <img
+      class="product__img-modal"
+      src="./images/modal-products/products-ice-cream.png"
+      alt=""
+      width="152"
+      height="139"
+    />
+  </span>
+
+  <ul class="nutritior__list">
+    <li class="nutrition__items">
+      <span class="items-number--shake">480</span>
+      <span class="items-text--shake postion-text">kcal</span>
+    </li>
+    <li class="nutrition__items">
+      <span class="items-number--shake">12g</span>
+      <span class="items-text--shake">Prote...</span>
+    </li>
+    <li class="nutrition__items">
+      <span class="items-number--shake">9,2g</span>
+      <span class="items-text--shake">Fats</span>
+    </li>
+    <li class="nutrition__items">
+      <span class="items-number--shake">50,4g</span>
+      <span class="items-text--shake">Carbs</span>
+    </li>
+  </ul>
+
+  <h4 class="modal__text-ingredients">Ingredients</h4>
+
+  <ul class="ingredients__list">
+    <li class="ingredients__items">
+      <span class="ingredients-text">Milk</span>
+      <span class="ingredients-numbers">300ml</span>
+    </li>
+    <li class="ingredients__items">
+      <span class="ingredients-text">Strawberry</span>
+      <span class="ingredients-numbers">60g</span>
+    </li>
+    <li class="ingredients__items">
+      <span class="ingredients-text">Cream</span>
+      <span class="ingredients-numbers">80 ml</span>
+    </li>
+    <li class="ingredients__items">
+      <span class="ingredients-text">Ice cream</span>
+      <span class="ingredients-numbers">30g</span>
+    </li>
+    <li class="ingredients__items">
+      <span class="ingredients-text">Sugar</span>
+      <span class="ingredients-numbers">20g</span>
+    </li>
+  </ul>
+
+  <div class="modal-form">
+    <form class="form-shake">
+      <label class="form-item">
+        <input
+          class="form-input products-input"
+          type="text"
+          name="inputBox"
+          placeholder="Name"
+        />
+      </label>
+      <label class="form-item">
+        <input
+          class="form-input products-input"
+          type="text"
+          name="inputBox"
+          placeholder="Phone"
+        />
+      </label>
+      <label class="form-item form-item-comment">
+        <input
+          class="form-input fi-comment"
+          type="text"
+          name="inputBox"
+          placeholder="Comment"
+        />
+      </label>
+      <button class="btn-sumbit-modal" type="submit">Submit</button>
+    </form>
+    
   </div>
 </div>
 
 <div class="modal modal__about" data-modal="3">
   <!--   Svg иконка для закрытия окна  -->
+  <!-- <svg
+    class="modal__cross js-modal-close"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+    />
+  </svg> -->
+
   <svg
     class="modal__cross js-modal-close"
     xmlns="http://www.w3.org/2000/svg"
@@ -456,26 +667,41 @@
     We appreciate your patience.
   </p>
   <form>
-    <div class="form">
+    <div class="form__franchise">
       <label class="form--label--franchise">
         <input
           class="form__input"
           type="text"
           name="name"
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
           required
-          placeholder="Name"
+          placeholder="Name Surname"
+          autocomplete="off"
+          minlength="2"
+          maxlength="35"
         />
+
+        <span class="form__franchise-span">Name</span>
+        <svg class="form__franchise-icon" width="24" height="24">
+          <use href="./images/sprite.svg#icon-form-ice-cream-icon"></use>
+        </svg>
       </label>
       <label class="form--label--franchise">
         <input
           class="form__input"
           type="tel"
           name="phone"
-          minlength="12"
+          minlength="9"
           maxlength="13"
           required
-          placeholder="Phone"
+          placeholder="(XXX)-XXX-XXXX"
+          autocomplete="off"
         />
+
+        <span class="form__franchise-span">Phone</span>
+        <svg class="form__franchise-icon" width="24" height="24">
+          <use href="./images/sprite.svg#icon-form-ice-cream-icon"></use>
+        </svg>
       </label>
       <label class="form--label--franchise">
         <input
@@ -483,15 +709,25 @@
           type="email"
           name="email"
           required
-          placeholder="Email"
+          placeholder="example@mail.com"
+          minlength="2"
+          maxlength="35"
+          autocomplete="off"
         />
+
+        <span class="form__franchise-span">Email</span>
+        <svg class="form__franchise-icon" width="24" height="24">
+          <use href="./images/sprite.svg#icon-form-ice-cream-icon"></use>
+        </svg>
       </label>
-      <label class="form--label--franchise">
+      <label class="form__franchise-comment">
         <textarea
           class="form__comment"
           rows="3"
-          placeholder="Comment"
+          placeholder="Your comment"
         ></textarea>
+
+        <span class="form__franchise-span--comment">Comment</span>
       </label>
     </div>
     <button class="btn__modal" type="submit">Submit</button>
