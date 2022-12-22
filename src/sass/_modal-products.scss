@@ -1,13 +1,15 @@
 .products__modal {
   border: 2px solid $accentColor;
-  min-height: 968px;
+  // min-height: 968px;
+  height: auto;
   position: absolute;
   top: 1500px;
 
   @media screen and (min-width: 768px) {
     max-width: 568px;
-    min-height: 996px;
-    top: 850px;
+    // min-height: 996px;
+    height: auto;
+    top: 755px;
     position: absolute;
   }
 
@@ -18,6 +20,7 @@
   @media screen and (min-width: 1200px) {
     top: 1230px;
     position: absolute;
+    height: auto;
   }
 }
 
