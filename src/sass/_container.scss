@@ -6,7 +6,7 @@
   // border: 0;
 
   @include screenType(mobile) {
-    width: 480px;
+    width: 320px;
   }
   @include screenType(tablet) {
     width: 767px;
