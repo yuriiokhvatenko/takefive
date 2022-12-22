@@ -17,13 +17,14 @@
     right: 12px;
     display: flex;
     padding: 0;
-    cursor: pointer;
+    cursor: url(../images/cursor/default.png), default;
     border: transparent;
     background-color: transparent;
     //background-color: #131313;
 }
 
 .close__btn-x {
+    
     @media screen and (min-width: 768px) {
         width: 24px;
         height: 24px;
