@@ -89,6 +89,9 @@
 
 .mobile-menu__link {
   display: block;
+  position: relative;
+  padding: 20px 30px;
+  overflow: hidden;
 
   @include font(700, 32px, 39px);
   color: $whiteTextColor;
@@ -99,10 +102,10 @@
     font-size: 40px;
   }
 
-  &:focus,
-  &:hover {
-    color: $blackTextColor;
-  }
+  // &:focus,
+  // &:hover {
+  //   color: $blackTextColor;
+  // }
 }
 
 .mobile__buy-now-btn {
@@ -146,4 +149,23 @@
 .mobile__buy-now-btn:disabled {
   background: $secondaryTextColor;
   fill: currentColor;
+}
+
+.hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #fff;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.hover__text {
+  color: #85a279;
+  padding: 20px 30px;
+  display: block;
+  will-change: transform;
 }
