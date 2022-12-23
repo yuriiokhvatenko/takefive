@@ -1,219 +1,204 @@
 .hero {
-    background-color: $bgColor;
-    background-image: url(../images/alt_hero/dots-sm@1x.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 320px;
-    @include screenType (retina) {
-        background-image: url(../images/alt_hero/dots-sm@2x.png);
+  padding-top: 50px;
+  padding-bottom: 238px;
+  background-color: $bgColor;
+
+  @include screenType(tablet) {
+    padding-top: 14px;
+    padding-bottom: 12px;
+  }
+  @include screenType(desktop) {
+    padding-top: 45px;
+    padding-bottom: 65px;
+  }
+
+  &__tittle-block {
+    display: block;
+
+    @include screenType(tablet) {
+      display: flex;
+      justify-content: space-between;
     }
-    @include screenType (tablet) {
-        background-size: 768px;
-        background-image: url(../images/alt_hero/dots_md@1x.png);
-        @include screenType (retina) {
-            background-image: url(../images/alt_hero/dots-md@2x.png);
-        }
-        
+  }
+
+  &__tittle {
+    max-width: 300px;
+    font-family: $accentFont;
+    margin-bottom: 32px;
+    @include font(400, 26px, 33px, 0.04em);
+    text-transform: uppercase;
+    color: $whiteTextColor;
+    @include screenType(tablet) {
+      margin-bottom: 24px;
+    }
+    @include screenType(desktop) {
+      max-width: 367px;
+      margin-bottom: 28px;
+      @include font(400, 38px, 48px, 0.04em);
+    }
+  }
+  &__tittle-right {
+    display: block;
+  }
+
+  &__tittle--largest {
+    @include font(400, 37px, 42px, 0.04em);
+  }
+
+  &__list {
+    display: flex;
+    @include screenType(tablet) {
+      margin-bottom: 12px;
+    }
+    @include screenType(desktop) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__count {
+    display: none;
+    @include screenType(tablet) {
+      display: block;
+    }
+  }
+
+  &__count-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__count-number {
+    @include font(900, 28px, 34px, 0.04em);
+    text-align: right;
+    text-transform: uppercase;
+    color: $blackTextColor;
+    margin-bottom: 4px;
+
+    @include screenType(desktop) {
+      @include font(900, 46px, 56px, 0.04em);
+    }
+  }
+
+  &__count-text {
+    @include font(400, 10px, 8px, normal);
+    color: $whiteTextColor;
+    text-align: right;
+    @include screenType(desktop) {
+      @include font(400, 14px, 17px, normal);
+    }
+  }
+
+  &__item a {
+    cursor: url(../images/cursor/pointer.png), pointer;
+  }
+
+  &__item:nth-child(1) {
+    display: flex;
+    padding: 11px 26px;
+    border: 2px solid $accentColor;
+    border-radius: 8px;
+    margin-right: 12px;
+    @include font(600, 12px, 15px, normal);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $blackTextColor;
+    @include screenType(desktop) {
+      @include font(600, 14px, 18px, normal);
+      margin-right: 34px;
+    }
+  }
+
+  &__item:nth-child(2) {
+    display: flex;
+    padding: 11px 0;
+    border-radius: 8px;
+    @include font(600, 12px, 15px, normal);
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $accentColor;
+    @include screenType(desktop) {
+      @include font(600, 14px, 18px, normal);
+    }
+  }
+
+  &__plate-block {
+    display: none;
+    @include screenType(tablet) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__plate-text {
+    max-width: 139px;
+    @include font(400, 12px, 17px, normal);
+    color: $whiteTextColor;
+    @include screenType(desktop) {
+      max-width: 200px;
+      padding-top: 68px;
+      @include font(400, 14px, 20px, normal);
+    }
+  }
+
+  &__plate-set {
+    z-index: 22;
+    position: relative;
+    margin-right: 32px;
+    @include screenType(desktop) {
+      margin-right: 16px;
+    }
+  }
+
+  &__plate-arrow {
+    fill: $whiteTextColor;
+    margin-top: 20px;
+    cursor: url(../images/cursor/pointer.png), pointer;
+    @include screenType(desktop) {
+      margin-top: 24px;
+    }
+  }
+
+  &__picture {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  &__ice {
+    position: absolute;
+    top: 21px;
+    left: 60px;
+    @include screenType(tablet) {
+      position: absolute;
+      top: -317px;
+      left: 376px;
     }
 
-    @include screenType (desktop) {
-        background-size: 1200px;
-        background-image: url(../images/alt_hero/dots-lg@1x.png);
-        
-        @include screenType (retina) {
-            background-image: url(../images/alt_hero/dots-lg@2x.png);
-            }
-
+    @include screenType(desktop) {
+      position: absolute;
+      top: -495px;
+      left: 640px;
     }
-    padding-top: 50px;
-    padding-bottom: 238px;
-    @include screenType (tablet) {
-        padding-top: 14px;
-        padding-bottom: 12px;
-    }
-    @include screenType (desktop) {
-        padding-top: 45px;
-        padding-bottom: 60px;
-    }
+  }
+}
 
-    &__tittle-block {
-        display: block;
+.hero__dots {
+  position: absolute;
+  top: 360px;
+  left: 0px;
 
-        @include screenType (tablet) {
-            display: flex;
-            justify-content: space-between;
-        }
-    }
+  @media screen and (min-width: 768px) {
+    top: 271px;
+    left: 0px;
+  }
 
-    &__tittle { 
-        max-width: 300px;
-        font-family: $accentFont;
-        margin-bottom: 32px;
-        @include font (400, 26px, 33px, 0.04em);
-        text-transform: uppercase;
-        color: $whiteTextColor;  
-        @include screenType (tablet) {
-            margin-bottom: 24px;
-        }
-        @include screenType (desktop) {
-            max-width: 367px;
-            margin-bottom: 28px;
-            @include font (400, 38px, 48px, 0.04em);
-        } 
-    }
-    &__tittle-right {
-        display: block;
-    }
+  @media screen and (min-width: 1200px) {
+    top: 164px;
+    left: -4px;
+  }
+}
 
-    &__tittle--largest {
-        @include font (400, 37px, 42px, 0.04em);
-
-    }
-
-    &__list {
-        display: flex;
-        @include screenType (tablet) {
-            margin-bottom: 12px;
-            
-        }
-        @include screenType (desktop) {
-            margin-bottom: 45px;
-        }
-    }
-
-    &__count {
-        display: none;
-        @include screenType (tablet) {
-            display: block;
-        }
-
-    }
-
-    &__count-item:not(:last-child) {
-        margin-bottom: 20px;
-    }
-
-    &__count-number {
-        @include font(900, 28px, 34px, 0.04em);
-        text-align: right;
-        text-transform: uppercase;
-        color: $whiteTextColor;
-        margin-bottom: 4px;
-
-        @include screenType (desktop) {
-            @include font (900, 46px, 56px, 0.04em);
-        }
-        }
-
-    &__count-text {
-        @include font (400, 10px, 8px, normal);
-        color: $blackTextColor;
-        text-align: right;
-        @include screenType (desktop) {
-            @include font (400, 14px, 17px, normal);
-        }
-    }
-    
-
-    &__item a {
-        cursor: url(../images/cursor/pointer.png), pointer;
-    }
-    
-
-
-    &__item:nth-child(1) {
-        display: flex;
-        padding: 11px 26px;
-        border: 2px solid $accentColor;
-        border-radius: 8px;
-        margin-right: 12px;
-        @include font (600, 12px, 15px, normal);
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: $blackTextColor;
-            @include screenType (desktop) {
-                @include font (600, 14px, 18px, normal);
-                margin-right: 34px;
-            }
-        
-        
-    }
-
-        &__item:nth-child(2) {
-            display: flex;
-            padding: 11px 0;
-            border-radius: 8px;
-            @include font (600, 12px, 15px, normal);
-            text-decoration: underline;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: $accentColor;
-            @include screenType (desktop) {
-                    @include font (600, 14px, 18px, normal);
-                }
-    
-        }
-
-        &__plate-block {
-            display: none;
-            @include screenType(tablet) {
-                display: flex;
-                align-items: center;
-            }
-        }
-
-        &__plate-text {
-            max-width: 139px;
-            @include font(400, 12px, 17px, normal);
-            color: $whiteTextColor;
-            @include screenType (desktop) {
-                max-width: 200px;
-                padding-top: 15px;
-                @include font (400, 14px, 20px, normal);
-            }
-        }
-
-        
-
-        &__plate-set {
-            margin-right: 32px;
-            @include screenType (desktop) {
-            margin-right: 16px; 
-            }
-        }
-
-        &__plate-arrow {
-            fill: $whiteTextColor;
-            margin-top: 20px;
-            cursor: url(../images/cursor/pointer.png), pointer;
-            @include screenType (desktop) {
-                margin-top: 24px;
-            }
-        }
-
-        &__picture {
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-        }
-        &__ice {
-            position: absolute;
-            top: 21px;
-            left: 60px;
-            @include screenType (tablet) {
-                position: absolute;
-                top: -317px;
-                left: 376px;
-            }
-
-            @include screenType (desktop) {
-                position: absolute;
-                top: -500px;
-                left: 647px;
-            }
-        }
-
-    
+.hero__container {
+  position: relative;
 }
