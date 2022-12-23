@@ -440,6 +440,8 @@
 
   cursor: url(../images/cursor/pointer.png), pointer;
 
+  transition: 300ms ease-in;
+
   // ::::::::::::::
   // btn location
   // ::::::::::::::
@@ -455,6 +457,8 @@
     // hover
     &:hover {
       background-color: $btnHoverColor;
+
+      transform: scale(1.050);
     }
 
     // focus
@@ -464,6 +468,8 @@
       color: #FFFFFF;
 
       outline: transparent;
+
+      transform: scale(1.050);
     }
 
     // disabled
@@ -488,6 +494,8 @@
     // hover
     &:hover {
       border-color: $btnHoverColor;
+
+      transform: scale(1.050);
     }
 
     // focus
@@ -497,6 +505,8 @@
       border-color: $btnHoverColor;
 
       outline: transparent;
+
+      transform: scale(1.050);
     }
 
     // disabled

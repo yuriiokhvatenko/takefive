@@ -404,8 +404,24 @@
   align-items: center;
   text-align: center;
 
+  cursor: url(../images/cursor/pointer.png), pointer;
+
   color: #131313;
   border-color: transparent;
+
+  transition: 300ms ease-in;
+
+  &:hover {
+    background-color: $btnHoverColor;
+
+    transform: scale(1.15);
+    }
+
+  &:focus {
+    background-color: $btnHoverColor;
+    color: $whiteTextColor;
+    transform: scale(1.15);
+    }  
 }
 
 .fi-comment {

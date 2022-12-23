@@ -319,14 +319,20 @@
     margin: auto;
     padding: 12px 34px;
 
+    transition: 300ms ease-in;
+
     &:hover {
         background: #0A8817;
+
+        transform: scale(1.050);
     }
 
     &:focus {
         background: #0A8817;
         color: #ffffff;
         outline: transparent;
+
+        transform: scale(1.050);
     }
 
     @media screen and (max-width:767.98px) {

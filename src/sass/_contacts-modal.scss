@@ -234,11 +234,16 @@
   background-color: $accentColor;
   border-radius: 10px;
 
-    cursor: url(../images/cursor/pointer.png), pointer;
+  cursor: url(../images/cursor/pointer.png), pointer;
+
+  transition: 300ms ease-in;
 
   // hover/focus
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #eac027;
+
+    transform: scale(1.050);
   }
 
   // media mob

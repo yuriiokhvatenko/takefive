@@ -135,6 +135,21 @@
             align-items: center;
             text-align: center;
             color: $blackTextColor;
+
+            transition: 300ms ease-in;
+
+        &:hover {
+            border-color: $btnHoverColor;
+
+            transform: scale(1.15);
+        }
+
+        &:focus {
+            border-color: $btnHoverColor;
+            color: $whiteTextColor;
+            transform: scale(1.15);
+        }
+
             @include screenType (desktop) {
                 @include font (600, 14px, 18px, normal);
                 margin-right: 34px;
@@ -151,6 +166,16 @@
             align-items: center;
             text-align: center;
             color: $accentColor;
+
+            transition: 300ms ease-in;
+
+            &:hover,
+            &:focus {
+                color: $btnHoverColor;
+
+                transform: scale(1.15);
+            }
+
             @include screenType (desktop) {
                     @include font (600, 14px, 18px, normal);
                 }

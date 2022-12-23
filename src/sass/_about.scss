@@ -200,16 +200,22 @@
         @include font (600, 14px, 18px, normal);
         color: #000;
         background-color: $accentColor;
+
+        transition: 300ms ease-in;
     }
 
     &__button:hover {
         background-color: $btnHoverColor;
+
+        transform: scale(1.050);
     }
 
     &__button:focus {
         background-color: $btnHoverColor;
         color: #fff;
         fill: #fff;
+
+        transform: scale(1.050);
     }
 
     &__button:disabled {
