@@ -74,10 +74,14 @@
   line-height: calc(20 / 16);
   cursor: url(../images/cursor/pointer.png), pointer;
 
+  transition: 300ms ease-in;
+
   &:hover,
   &:focus {
     color: $accentColor;
     border: transparent;
+
+    transform: scale(1.2);
   }
 }
 
@@ -118,10 +122,10 @@
 
 .header__buy-now-btn {
   margin-left: 32px;
+  padding: 12px 35px 12px 36px;
   height: 42px;
   display: block;
   font-family: 'Montserrat', sans-serif;
-  padding: 12px 51px 12px 36px;
 
   background: $accentColor;
   border: none;
@@ -134,15 +138,20 @@
   fill: currentColor;
   @include font(600, 14px, 20px);
 
+  transition: 300ms ease-in;
+
   &:hover {
     background: $btnHoverColor;
     fill: currentColor;
+    transform: scale(1.050);
   }
 
   &:focus {
     background: $btnHoverColor;
     color: $whiteTextColor;
     fill: currentColor;
+
+    transform: scale(1.050);
   }
 
   &:disabled {

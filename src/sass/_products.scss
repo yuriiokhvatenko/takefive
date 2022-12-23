@@ -554,6 +554,13 @@
     border: none;
     background: transparent;
     cursor: url(../images/cursor/pointer.png), pointer;
+
+    transition: 300ms ease-in;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
+    }
 }
 
 
