@@ -121,7 +121,10 @@
     
 
 
-    &__item:nth-child(1) {
+    // &__item:nth-child(1) {
+    // }
+
+    &__link-one {
         display: flex;
         padding: 11px 26px;
         border: 2px solid $accentColor;
@@ -136,8 +139,6 @@
                 @include font (600, 14px, 18px, normal);
                 margin-right: 34px;
             }
-        
-        
     }
 
         &__item:nth-child(2) {

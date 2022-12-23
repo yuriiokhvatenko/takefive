@@ -203,14 +203,42 @@
   align-items: center;
  }
  .form-field {
+  position: relative;
   width: 224px;
   margin: auto;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
+
+  transition: 300ms ease;
+
+  // focus
+    &:focus-within .form__buynow-icon {
+      opacity: 1;
+  
+      fill: rgba(255, 106, 0, 0.762);
+      filter: drop-shadow(1px 2px 9px rgba(255, 106, 0, 0.41));
+    }
+
+  &:focus-within:not([data-message], [data-payment]) {
+      box-shadow: 0 0 0 4px rgba(255, 106, 0, 0.41);
+    }
+  
+    // if valid
+    &:has(.form-input:not(:placeholder-shown):valid) {
+      box-shadow: 0 0 0 4px rgba(3, 168, 6, 0.498);
+    }
+  
+    // if invalid
+    &:has(.form-input:not(:placeholder-shown):invalid) {
+      box-shadow: 0 0 0 4px rgba(227, 43, 26, 0.485);
+    }
+
   @media screen and (min-width: 768px){
     width: 368px;
   }
  }
+
  .form-field:not(:last-child) {
   display: block;
   flex-basis: 208px;
@@ -235,7 +263,34 @@
   border: 1px solid $bgColor;
   border-radius: 10px;
 
+  transition: 300ms ease-in-out;
+
   cursor: url(../images/cursor/default.png), auto;
+  
+  &:focus {
+    border: 1px solid transparent;
+  }
+
+   &::placeholder {
+      opacity: 0;
+    }
+
+    &:focus::placeholder {
+      opacity: 1;
+    }
+
+  &:focus + .form__buynow-span,
+    &:not(:placeholder-shown) + .form__buynow-span {
+    transform: translateY(-160%) scale(0.8);
+    padding: 0px 10px;
+    border-radius: 5px;
+    background-color: $whiteTextColor;
+
+    @media screen and (max-width:767px) {
+      transform: translateY(-140%);
+    }
+    }
+
   @media screen and (min-width: 768px) {
     width: 368px;
     height: 42px;
@@ -243,11 +298,68 @@
     padding-top: 11px;
     padding-bottom: 11px;
   }
+
 }
-.form-input:focus:invalid {
-  border: 1px solid red;
+
+.form__buynow-span {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+
+  background-color: #f8d24e1a;
+
+  transform: translateY(-50%);
+  transform-origin: top left;
+
+  cursor: url(../images/cursor/default.png), auto;
+
+  font-family: inherit;
+  @include font (400, 14px, 20px, normal);
+
+  transition: 200ms ease-in;
+
+  @media screen and (max-width: 767px) {
+    @include font (400, 10px, 20px, normal);
+  }
 }
+
+.form__buynow-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  opacity: 0;
+
+  transition: 300ms ease-in-out;
+
+  // if invalid
+    .form-input:not(:placeholder-shown):invalid:required ~ & {
+    opacity: 1;
+    fill: rgba(227, 43, 26, 0.783);
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+
+    transform: scale(1);
+    transition: 300ms ease;
+  }
+
+   //  if valid
+  .form-input:not(:placeholder-shown):valid:required ~ & {
+    opacity: 1;
+    fill: rgba(3, 168, 6, 0.887);
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+
+    transform: scale(1);
+    transition-delay: 150ms;
+  }
+}
+
 .form-message {
+  position: relative;
+
   display: flex;
   width: 100%;
   height: 120px;
@@ -265,6 +377,26 @@
 
   cursor: url(../images/cursor/default.png), auto;
 
+  &::placeholder {
+    opacity: 0;
+  }
+
+  &:focus::placeholder {
+    opacity: 1;
+  }
+
+  &:focus + .form__buynow-message,
+    &:not(:placeholder-shown) + .form__buynow-message {
+    transform: translateY(-150%) scale(0.8);
+    padding: 0px 10px;
+    border-radius: 5px;
+    background-color: $whiteTextColor;
+
+    @media screen and (max-width:767px) {
+      transform: translateY(-140%);
+    }
+    }
+
   @media screen and (min-width: 768px) {
     width: 368px;
     height: 84px;
@@ -273,6 +405,18 @@
     padding-bottom: 11px;
   }
 }
+
+.form__buynow-message {
+  position: absolute;
+  top: 16px;
+  left: 11px;
+
+  transition: 200ms ease;
+  transform-origin: top left;
+
+  cursor: url(../images/cursor/default.png), auto;
+}
+
 .form-btn {
   font-family: 'Montserrat';
   font-style: normal;
