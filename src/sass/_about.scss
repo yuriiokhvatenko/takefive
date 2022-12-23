@@ -200,6 +200,8 @@
         @include font (600, 14px, 18px, normal);
         color: #000;
         background-color: $accentColor;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &__button:hover {
