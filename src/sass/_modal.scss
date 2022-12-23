@@ -2,6 +2,8 @@
 
 .modal {
 
+    z-index: 1070;
+
     @media screen and (max-width:767px) {
         margin-top: 270px;
     }
