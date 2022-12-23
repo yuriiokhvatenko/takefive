@@ -1,10 +1,9 @@
 /* Стили для модальных окон */
 
 .modal {
-
-    @media screen and (max-width:767px) {
-        margin-top: 270px;
-    }
+  @media screen and (max-width: 767px) {
+    // margin-top: 270px;
+  }
 }
 
 // .modal {
@@ -12,7 +11,6 @@
 //     /* Скрываем окна  */
 //     opacity: 0;
 //     visibility: hidden;
-
 
 //     /*  Установаем ширину окна  */
 //     width: 100%;
@@ -35,7 +33,6 @@
 //     transition: 0.3s all;
 // }
 
-
 // /* Стили для активных классов подложки и окна */
 
 // .modal.active,
@@ -43,7 +40,6 @@
 //     opacity: 1;
 //     visibility: visible;
 // }
-
 
 // /* Стили для кнопки закрытия */
 
@@ -56,7 +52,6 @@
 //     fill: #444;
 //     cursor: pointer;
 // }
-
 
 /* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
 
