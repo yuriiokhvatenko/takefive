@@ -1,9 +1,13 @@
 /* Стили для модальных окон */
 
 .modal {
-  @media screen and (max-width: 767px) {
-    // margin-top: 270px;
-  }
+
+    z-index: 1070;
+
+    @media screen and (max-width:767px) {
+        margin-top: 270px;
+    }
+
 }
 
 // .modal {
